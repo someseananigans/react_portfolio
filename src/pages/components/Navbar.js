@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import useBodyColor from '../hooks/changeBgColor'
 
 import '../css/navbar.css'
 
@@ -35,7 +36,6 @@ const Navbar = (props) => {
       }
     }, [])
 
-
   return (
     <nav className="navbar" >
       <div className="brand">
@@ -53,7 +53,7 @@ const Navbar = (props) => {
 
 
         <Link to='/' id="about" className={`link ${locationState.activePage == 'about' ? 'active' : ''}`}>
-          <h3 onClick={handlePageClick}>about</h3>
+          <h3 id="black" onClick={handlePageClick}>about</h3>
         </Link>
 
         <Link to='/portfolio' id="portfolio" className={`link ${locationState.activePage == 'portfolio' ? 'active' : ''}`}>

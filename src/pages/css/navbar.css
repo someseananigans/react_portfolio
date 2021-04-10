@@ -1,8 +1,8 @@
 .navbar {
   /* justify-content: flex-start; */
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
+  /* margin-left: auto;
+  margin-right: auto; */
+  width: 100%;
   height: auto;
   display: flex;
   position: relative;
@@ -10,10 +10,12 @@
   justify-content: space-between;
   padding-top: .5rem;
   padding-bottom: .5rem;
+  /* remove if you want navbar to match body color */
+  background-color: #1c1d25;
 }
 
 .test {
-  color:rgba(0, 35, 75, 0.822)
+  color: rgba(0, 35, 75, 0.822)
 }
 
 .navbar-brand {
@@ -28,15 +30,18 @@
   margin: 0;
   font-size: 22px;
   font-weight: 500;
+  margin-bottom: -5px;
 }
 
 .self span {
-  font-size: 15px;
+  font-size: 14px;
+  font-family: 'Spartan', sans-serif;
 }
 
 .logo {
   align-self: center;
-  margin-right: 6px;
+  margin-left: -10px;
+  margin-right: 10px;
   height: 50px;
   width: auto;
 }

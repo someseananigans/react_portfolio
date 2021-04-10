@@ -1,12 +1,30 @@
-import Form from'./components/Form'
+import Form from './components/Form'
 import './css/contact.css'
 import useBodyColor from './hooks/changeBgColor'
 
 
 const Contact = () => {
-  useBodyColor('darkblue')
+  useBodyColor('white')
   return (
-    <Form/>
+    <>
+      <div className="contactBody">
+
+        <div className="contactBox">
+
+          <div className="leftPortion">
+            <h3>Contact Me</h3>
+          </div>
+          <div className="rightPortion" >
+        <Form />
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+    </>
   )
 }
 
