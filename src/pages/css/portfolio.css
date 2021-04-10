@@ -1,0 +1,52 @@
+.image {
+  width: 100%;
+  cursor: zoom-in;
+  /* border-radius: 16px; */
+  object-fit: cover;
+  /* opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-filter: alpha(opacity=0); */
+}
+
+.image:hover {
+  /* opacity: 100;
+  filter: alpha(opacity=100);
+  -webkit-filter: alpha(opacity=100); */
+}
+
+.card1 {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 325px;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  background-size: cover; */
+  border-radius: 16px;
+}
+
+.wrapper2 {
+  display: inline-flex;
+  padding: 8px;
+}
+
+.description {
+  display: inline-block;
+  position: relative;
+}
+
+.description:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 3px;
+  left: 0;
+  background: transparent url(http://www.purepleasuredesign.com/wp-content/themes/ppd2012/images/square-instagram.png) 50% 50% no-repeat;
+  /* border-radius: 16px; */
+  transition-duration: .5s;
+}
+
+.description:hover:after {
+  background: transparent url(http://www.purepleasuredesign.com/wp-content/themes/ppd2012/images/square-instagram.png) 40% 30% no-repeat;
+}

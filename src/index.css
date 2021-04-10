@@ -1,0 +1,14 @@
+*, body {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1, h2, h3, h4, p, span {
+  color: white
+}
+
+#main {
+  height: 100vh;
+}
