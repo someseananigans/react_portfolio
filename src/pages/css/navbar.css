@@ -1,0 +1,85 @@
+.navbar {
+  /* justify-content: flex-start; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.test {
+  color:rgba(0, 35, 75, 0.822)
+}
+
+.navbar-brand {
+  display: flex;
+}
+
+.navbar-brand {
+  text-decoration: none !important;
+}
+
+.self h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.self span {
+  font-size: 15px;
+}
+
+.logo {
+  align-self: center;
+  margin-right: 6px;
+  height: 50px;
+  width: auto;
+}
+
+.pages {
+  justify-content: flex-end;
+  display: flex;
+  justify-content: right;
+}
+
+.link {
+  text-decoration: none;
+  margin-left: 10px;
+  transition: transform 500ms;
+  will-change: transform;
+  -webkit-transition: transform 500ms;
+  -moz-transition: transform 500ms;
+  -ms-transition: transform 500ms;
+  -o-transition: transform 500ms;
+}
+
+.link :hover {
+  transform: translateY(3px);
+  -webkit-transform: translateY(3px);
+  -moz-transform: translateY(3px);
+  -ms-transform: translateY(3px);
+  -o-transform: translateY(3px);
+}
+
+.link h3 {
+  margin: 0;
+  font-size: 20px;
+  color: white;
+  text-transform: uppercase;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: 500;
+}
+
+a:-webkit-any-link {
+  color: white
+}
+
+.active {
+  border-bottom: 3px solid rgb(67, 217, 255)
+}
