@@ -2,13 +2,15 @@
   /* justify-content: flex-start; */
   /* margin-left: auto;
   margin-right: auto; */
-  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
   height: auto;
   display: flex;
   position: relative;
   align-items: center;
   justify-content: space-between;
-  padding-top: .5rem;
+  padding-top: 1rem;
   padding-bottom: .5rem;
   /* remove if you want navbar to match body color */
   background-color: #1c1d25;
@@ -30,7 +32,7 @@
   margin: 0;
   font-size: 22px;
   font-weight: 500;
-  margin-bottom: -5px;
+  margin-bottom: -2px;
 }
 
 .self span {
@@ -40,7 +42,7 @@
 
 .logo {
   align-self: center;
-  margin-left: -10px;
+  margin-left: 15px;
   margin-right: 10px;
   height: 50px;
   width: auto;
@@ -50,6 +52,7 @@
   justify-content: flex-end;
   display: flex;
   justify-content: right;
+  margin-right: 15px;
 }
 
 .link {

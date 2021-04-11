@@ -1,32 +1,10 @@
 .contactForm {
   display: flex;
-  width: 80%;
   flex-direction: column;
+  width: 90%;
   justify-content: space-around;
   margin-left: auto;
   margin-right: auto;
-  background: rgb(26, 26, 26);
-  padding: 30px;
-  border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-}
-
-.form-control {
-  /* border-radius: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0; */
-}
-
-.contactForm form {
-  display: flex;
-}
-
-
-.name {
-  width: 100%;
+  text-align: center;
+  align-items: center;
 }

@@ -10,13 +10,13 @@ import Button from '@material-ui/core/Button'
 const CssTextField = withStyles({
   root: {
     '& label.Mui-focused': {
-      color: 'rgb(59, 216, 255) !important',
+      // color: 'rgb(59, 216, 255) !important',
     },
     '& .MuiFilledInput-underline:after': {
-      borderBottomColor: 'rgb(59, 216, 255)',
+      borderBottomColor: 'rgba(63, 81, 181, 0.5)',
     },
     '& .MuiFilledInput-root': {
-      backgroundColor: 'rgb(255 255 255 / 7%)',
+      backgroundColor: '#1c1d25'
     },
     '& .MuiFilledInput-input': {
       color: 'white',
@@ -30,42 +30,71 @@ const CssTextField = withStyles({
     '& .MuiFormLabel-root.Mui-error': {
       color: '#f44336',
     },
-    '& .MuiInput-underline.Mui-error:after': {
-      borderBottomColor: '#f44336 ',
+    '& .MuiFilledInput-underline.Mui-error:after': {
+      borderBottomColor: '#f44336',
     },
     '& input': {
       color: 'white !important',
     },
+    '& .MuiInputLabel-filled.MuiInputLabel-shrink': {
+      transform: 'translate(11px, 4px) scale(0.75)',
+    },
   },
 })(TextField);
 
-const useStyles = makeStyles((theme: Theme) => ({
-  root: {
-    '& > *': {
-      margin: theme.spacing(1),
-      width: '25ch'
-    },
+const useStyles = makeStyles((theme) => ({
+  contact: {
+    width: '90%',
+    marginBottom: '24px'
   },
-}));
+  message: {
+    width: '90%',
+    marginBottom: '24px'
+  },
+  button: {
+    width: '150px'
+  }
+}))
 
 const Form = () => {
-  const classes = useStyles();
+  const classes = useStyles()
 
+  const handleValidation = () => {
+    let eErrText, nErrText, mErrText = ''
+    let emailValid = formState.email.value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+    let errE = !emailValid
+    if (errE) { eErrText = `Hmm... I can't find your email` }
+    let contName = formState.name.value.length >= 1
+    let errN = !contName
+    if (errN) { nErrText = `Sorry, I didn't get your name` }
+    let contMessage = formState.message.value.length >= 1
+    let errM = !contMessage
+    if (errM) { mErrText = `Don't forget the message~` }
 
-  const handleValidation = (fieldName, value) => {
-    switch (fieldName) {
-      case 'email':
-        let emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
-        let err = !emailValid
-        setFormState({ ...formState, emailError:  err  })
-        console.log(formState.email.error)
-        break;
-    }
+    setFormState({
+      ...formState,
+      email: {
+        ...formState.email,
+        error: errE,
+        text: eErrText
+      },
+      name: {
+        ...formState.name,
+        error: errN,
+        text: nErrText
+      },
+      message: {
+        ...formState.message,
+        error: errM,
+        text: mErrText
+      }
+    })
   }
+
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    handleValidation('email', formState.email)
+    handleValidation()
     //if error do not submit and set error
     if (!formState.email.error) {
       console.log(formState.email.error)
@@ -76,54 +105,95 @@ const Form = () => {
   }
 
   const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    message: '',
-    containsName: false,
-    containsMessage: false,
-    emailError: false,
+    name: {
+      value: '',
+      error: false,
+      text: ''
+    },
+    email: {
+      value: '',
+      error: false,
+      text: '',
+    },
+    message: {
+      value: '',
+      error: false,
+      text: ''
+    }
   })
 
   const handleInputChange = ({ target }) => {
-    setFormState({ ...formState, [target.name]:  target.value })
+    switch (target.name) {
+      case 'name':
+        setFormState({
+          ...formState, name: {
+            ...formState.name,
+            value: target.value
+          }
+        })
+        break;
+      case 'email':
+        setFormState({
+          ...formState, email: {
+            ...formState.email,
+            value: target.value
+          }
+        })
+        break;
+      case 'message':
+        setFormState({
+          ...formState, message: {
+            ...formState.message,
+            value: target.value
+          }
+        })
+        break;
+    }
+    
   }
-  const { name, message, email, containsName, containsMessage, emailError} = formState
+
+  const { name, message, email } = formState
+
   console.log(formState)
+
   return (
-    <form onSubmit={handleSubmit} className={classes.root} noValidate autoComplete="off">
+    <form onSubmit={handleSubmit} className='contactForm' noValidate autoComplete="off">
       <CssTextField
-        className="name"
+        className={classes.contact}
         onChange={handleInputChange}
-        error={containsName}
-        value={name}
+        error={name.error}
+        value={name.value}
         name="name"
-        label="Name" 
+        label="Name"
         variant="filled"
-        helperText="What's Your Name?"/>
+        helperText={name.text} />
       <CssTextField
+        className={classes.contact}
         onChange={handleInputChange}
-        error={emailError}
-        value={email}
+        error={email.error}
+        value={email.value}
         name="email"
-        label="Email" 
+        label="Email"
         variant="filled"
-        helperText="How Can I Reach You?"/>
+        helperText={email.text} />
       <CssTextField
+        className={classes.message}
         multiline
-        rows={5}
+        rows={7}
         onChange={handleInputChange}
-        error={containsMessage}
-        value={message}
+        error={message.error}
+        value={message.value}
         name="message"
-        label="Message" 
+        label="Message"
         variant="filled"
-        helperText="Send a Message~" />
+        helperText={message.text} />
       <Button
+        className={classes.button}
         variant='outlined'
         color='primary'
         onClick={handleSubmit}
       >
-        Search
+        Send
       </Button>
     </form>
 

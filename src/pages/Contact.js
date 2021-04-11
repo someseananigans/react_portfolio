@@ -4,18 +4,23 @@ import useBodyColor from './hooks/changeBgColor'
 
 
 const Contact = () => {
-  useBodyColor('white')
+  useBodyColor('darkgray')
   return (
     <>
       <div className="contactBody">
 
         <div className="contactBox">
 
-          <div className="leftPortion">
+          {/* <div className="leftPortion">
             <h3>Contact Me</h3>
-          </div>
+          </div> */}
           <div className="rightPortion" >
-        <Form />
+            <div className="contactHeader">
+              <h1>Shoot me message!</h1>
+              <p>From collaborative projects to sharing ideas</p>
+              <p>Let's connect!</p>
+            </div>
+            <Form />
           </div>
         </div>
 
