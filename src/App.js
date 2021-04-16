@@ -11,8 +11,10 @@ import Home from './pages/Home'
 import Portfolio from './pages/Portfolio'
 import Contact from './pages/Contact'
 import Resume from './pages/Resume'
-import Navbar from './pages/components/Navbar'
+import Navbar from './components/Navbar'
 import logo from './SeanLogo.png'
+
+import { colorPalette, projects } from './Data'
 
 const App = () => {
 
@@ -20,20 +22,19 @@ const App = () => {
     <div id="main">
 
       <Router>
-        <Navbar logo={logo} />
-
+        <Navbar logo={logo} {...colorPalette} />
         <Switch>
           <Route exact path='/' >
-            <Home />
+            <Home {...colorPalette} />
           </Route>
           <Route path='/portfolio' >
-            <Portfolio />
+            <Portfolio projects={projects} {...colorPalette} />
           </Route>
           <Route path='/contact'>
-            <Contact />
+            <Contact {...colorPalette} />
           </Route>
           <Route path='/resume'>
-            <Resume />
+            <Resume {...colorPalette} />
           </Route>
         </Switch>
       </Router>
