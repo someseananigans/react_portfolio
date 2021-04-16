@@ -1,4 +1,4 @@
-import useBodyColor from './hooks/changeBgColor'
+import useBodyColor from '../hooks/useBodyColor'
 
 
 const Resume = () => {
