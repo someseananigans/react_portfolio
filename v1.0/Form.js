@@ -4,7 +4,7 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button'
-import { colorPalette } from '../Data';
+import { colorPalette } from '../src v1.0/Data';
 
 const { colorScheme } = colorPalette
 
@@ -204,7 +204,7 @@ const FormBtn = styled(Button)`
   border: ${({ coloroverwrite }) => ('1px solid ' + coloroverwrite[3] + '!important')};
 
   &:hover {
-    background-color: ${({ coloroverwrite }) => (coloroverwrite[3]+'!important')} ;
+    background-color: ${({ coloroverwrite }) => (coloroverwrite[3] + '!important')} ;
   }
 `
 const FormBox = styled.div`

@@ -22,9 +22,19 @@ const App = () => {
     <div id="main">
 
       <Router>
+        <Navbar logo={logo} {...colorPalette} />
         <Switch>
           <Route exact path='/' >
-
+            <Home {...colorPalette} />
+          </Route>
+          <Route path='/portfolio' >
+            <Portfolio projects={projects} {...colorPalette} />
+          </Route>
+          <Route path='/contact'>
+            <Contact {...colorPalette} />
+          </Route>
+          <Route path='/resume'>
+            <Resume {...colorPalette} />
           </Route>
         </Switch>
       </Router>

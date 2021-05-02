@@ -23,16 +23,21 @@
 }
 
 .code-block {
-  animation: read 1.25s infinite linear;
-  -webkit-animation: read 1.25s infinite linear;
+  animation: read 1.75s ease-in-out;
+  -webkit-animation: read 1.75s ease-in-out;
+  animation-iteration-count: 2;
 }
 
 svg:hover .code-block {
-  animation-play-state: paused;
+  animation-play-state: running;
 }
 
 .code-block rect {
   fill: var(--code-one);
+}
+
+.code-block rect:nth-of-type(15), .code-block rect:nth-of-type(17) {
+  fill: var(--code-four);
 }
 
 .code-block rect:nth-of-type(1) {

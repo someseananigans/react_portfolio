@@ -26,7 +26,7 @@ const Home = ({ colorScheme }) => {
                   Full Stack Web Developer
                 </SubHeading>
                 <Intro color={colorScheme}>
-                  I enjoy creating fun web applications With my knowledge in front and back end languages, responsive frameworks, databases and bost code practices. I like tackling functionality problems and integrating useful interactive features to develop rich user friendly web experiences. Challenges continue to excite me and fuel the fire to my passion.
+                  I enjoy creating fun web applications with my knowledge in front and back end languages, responsive frameworks, and databases. I like tackling functionality problems and integrating useful interactive features to develop rich user friendly web experiences. Challenges continue to excite me and fuel the fire to my passion.
                 </Intro>
               </TextWrapper>
             </HomeColumn>
