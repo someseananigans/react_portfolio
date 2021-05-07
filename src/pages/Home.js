@@ -1,9 +1,7 @@
 import React from 'react'
-import { Navbar, Sidebar, HeroSection, About, Footer, Contact } from '../components/'
+import { Navbar, Sidebar, HeroSection, About, Footer, Contact, Portfolio, Skills } from '../components/'
 import { useState } from 'react'
-import { about, discover, portfolio, contact, aboutMe } from '../components/InfoSection/data'
-import Portfolio from '../components/Portfolio'
-import { colorPalette, projects } from '../Data'
+import { aboutMe, colorPalette, projects, skills } from '../Data'
 
 
 const Home = () => {
@@ -21,6 +19,7 @@ const Home = () => {
         toggleOpen={toggleOpen} />
       <HeroSection />
       <About {...aboutMe} />
+      <Skills {...skills} />
       <Portfolio {...projects} />
       <Contact {...colorPalette} />
       <Footer />

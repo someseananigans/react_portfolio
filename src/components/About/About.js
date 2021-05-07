@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from '../ButtonElement'
-import Shades from '../Shades/Shades'
+import { Shades } from '..'
 import { InfoContainer, InfoWrapper, InfoRow, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle, BtnWrap, ImgWrapper, Img } from './AboutElements'
 
 

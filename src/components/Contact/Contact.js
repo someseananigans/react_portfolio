@@ -2,7 +2,6 @@ import Form from './Form'
 import styled from 'styled-components'
 import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
-import { Container } from '../../globalStyles'
 
 const Contact = ({ colorScheme }) => {
   console.log(colorScheme)
@@ -17,17 +16,33 @@ const Contact = ({ colorScheme }) => {
                 <Spiel color={colorScheme}>From collaborative projects to sharing ideas</Spiel>
                 <Tagline color={colorScheme}>Let's connect!</Tagline>
                 <SocialIcons>
-                  <IconLink href='/' target='_blank' aria-label='LinkedIn'>
+                  <IconLink
+                    href='https://www.linkedin.com/in/seansn/'
+                    target='_blank'
+                    aria-label='LinkedIn'>
                     <FaLinkedin />
+                    <TipText>@seansn</TipText>
                   </IconLink>
-                  <IconLink href='/' target='_blank' aria-label='GitHub'>
+                  <IconLink
+                    href='https://github.com/someseananigans'
+                    target='_blank'
+                    aria-label='GitHub'>
                     <FaGithub />
+                    <TipText>@someseananigans</TipText>
                   </IconLink>
-                  <IconLink href='/' target='_blank' aria-label='Email'>
+                  <IconLink
+                    href='mailto:nsean321@gmail.com'
+                    target='_blank'
+                    aria-label='Email'>
                     <HiOutlineMail />
+                    <TipText>nsean321@gmail.com</TipText>
                   </IconLink>
-                  <IconLink href='/' target='_blank' aria-label='Instagram'>
+                  <IconLink
+                    href='https://www.instagram.com/some_seananigans/'
+                    target='_blank'
+                    aria-label='Instagram'>
                     <FaInstagram />
+                    <TipText>@some_seananigans</TipText>
                   </IconLink>
                 </SocialIcons>
               </TextWrapper>
@@ -63,9 +78,22 @@ const ContactDisplay = styled.div`
     height: 1300px;
   }
 `
-const ContactContainer = styled(Container)`
+const ContactContainer = styled.div`
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 50px;
+  padding-left: 50px;
+
   padding-right: 15px;
   padding-left: 15px;
+
+  @media screen and (max-width: 991px) {
+  padding-right: 30px;
+  padding-left: 30px;
+}
 
   @media screen and (max-width: 600px) {
     padding-right: 0px;
@@ -141,19 +169,45 @@ const Tagline = styled.p`
   padding: 0 20px;
 `
 
+const TipText = styled.span`
+  visibility: hidden;
+  background: #010606;
+  /* background: #0f0f0f; */
+  color: #f7f8fa;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  font-size: 10px;
+  /* transition: all 0.2s ease-in-out; */
+  box-shadow: 0px 0px 5px 0px #66fcf1;
+  width: 130px;
+  margin-left: -65px;
+  left: 50%;
+`
+
+
 const SocialIcons = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   /* width: 240px; */
-`
+  `
 const IconLink = styled.a`
   color: #fff;
   font-size: 28px;
   margin: 15px;
 
+  &:hover ${TipText} {
+    visibility: visible;
+    top: 42px;
+    /* left: -13px; */
+
+  }
+  
   &:hover {
     color: #66fcf1;
     transform: scale(1.08);
   }
 `
+

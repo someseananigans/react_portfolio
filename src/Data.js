@@ -1,5 +1,7 @@
 import Bartender from './images/Bartender.png'
 import FreeMarket from './images/FreeMarket.png'
+import codeThink from './images/svg-1.svg'
+
 
 export const colorPalette = {
   colorScheme: [
@@ -60,4 +62,39 @@ export const projects = {
     deploy: '',
     image: ''
   }
+}
+
+
+export const aboutMe = {
+  id: 'about',
+  // lightBg: true,
+  // lightText: false,
+  // lightTextDesc: false,
+  topLine: 'About Me',
+  headline: 'Developer / Critical Thinker',
+  description: 'I enjoy creating fun web applications with my knowledge in front and back end languages, responsive frameworks, and databases. I like tackling functionality problems and integrating useful interactive features to develop rich user friendly web experiences. Challenges continue to excite me and fuel the fire to my passion.',
+  // buttonLabel: 'Get Started',
+  imgStart: true,
+  img: codeThink,
+  alt: 'shades',
+  // dark: false,
+  // primary: false,
+  // darkText: true,
+}
+
+export const skills = {
+  id: 'discover',
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: false,
+  topLine: 'Premium Bank',
+  headline: 'Unlimited Transactions with zero fees',
+  description: 'Get access to our exclusive app that allows you to send unlimited',
+  buttonLabel: 'Get Started',
+  imgStart: true,
+  img: codeThink,
+  alt: '',
+  dark: false,
+  primary: false,
+  darkText: true,
 }

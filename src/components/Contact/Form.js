@@ -39,6 +39,7 @@ const Form = (colorScheme) => {
     let contMessage = formState.message.value.length >= 1
     let errM = !contMessage
     if (errM) { mErrText = `Don't forget the message~` }
+    if (errE || errN || errM) { setSpacing(false) } else { setSpacing(true) }
 
     setFormState({
       ...formState,
@@ -60,16 +61,20 @@ const Form = (colorScheme) => {
     })
   }
 
+  const [spacing, setSpacing] = useState(true)
+
   const handleSubmit = (event) => {
     event.preventDefault()
     handleValidation()
     //if error do not submit and set error
     if (!formState.email.error) {
       console.log(formState.email.error)
+
     }
     // set message and contact info to be an email sent to you
     else {
       console.log('error')
+
     }
   }
 
@@ -116,7 +121,8 @@ const Form = (colorScheme) => {
           name="name"
           label="Name"
           variant="filled"
-          helperText={name.text} />
+          helperText={name.text}
+          spacing={spacing} />
         <InputField
           onChange={handleInputChange}
           error={email.error}
@@ -124,7 +130,8 @@ const Form = (colorScheme) => {
           name="email"
           label="Email"
           variant="filled"
-          helperText={email.text} />
+          helperText={email.text}
+          spacing={spacing} />
         <InputField
           multiline
           rows={7}
@@ -134,7 +141,8 @@ const Form = (colorScheme) => {
           name="message"
           label="Message"
           variant="filled"
-          helperText={message.text} />
+          helperText={message.text}
+          spacing={spacing} />
         <FormBtn
           variant='outlined'
           coloroverwrite={colorScheme}
@@ -196,7 +204,7 @@ const FormWrapper = styled.form`
 
 const InputField = styled(CssTextField)`
   width: 90%;
-  margin-bottom: 20px !important;
+  margin-bottom: ${({ spacing }) => (spacing ? '20px !important' : '10px !important')};
 `
 
 const FormBtn = styled.button`
@@ -225,7 +233,7 @@ const FormBtn = styled.button`
   }
 `
 const FormBox = styled.div`
-  height: 500px;
+  height: 520px;
   max-width: 500px;
   width: 100%;
   box-shadow: 15px 15px 0px 0px white;

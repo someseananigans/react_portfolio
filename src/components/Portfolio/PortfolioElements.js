@@ -242,13 +242,14 @@ export const IconWrapper = styled.div`
 export const TipText = styled.span`
   visibility: hidden;
   background: #010606;
+  /* background: #0f0f0f; */
   color: #f7f8fa;
   border-radius: 6px;
   padding: 5px;
   position: absolute;
   z-index: 1;
   font-size: 10px;
-  transition: all 0.2s ease-in-out;
+  /* transition: all 0.2s ease-in-out; */
   box-shadow: 0px 0px 5px 0px #66fcf1;
 `
 
