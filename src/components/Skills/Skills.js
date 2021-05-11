@@ -1,7 +1,7 @@
 import React from 'react'
 // import { Button } from '../ButtonElement'
 import { InfoContainer, InfoWrapper, InfoRow, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle, TechWrapper, TechHead, IconWrapper, TechIcon, IconLabel } from './SkillsElements'
-import { SiJavascript, SiHtml5, SiCss3, SiMongodb, SiReact, SiNodeDotJs, SiFirebase, SiHeroku, SiGit, SiGithub } from 'react-icons/si'
+// import { SiJavascript, SiHtml5, SiCss3, SiMongodb, SiReact, SiNodeDotJs, SiFirebase, SiHeroku, SiGit, SiGithub } from 'react-icons/si'
 import { SiJavascript, SiHtml5, SiMongodb, SiReact, SiNodeDotJs, SiFirebase, SiHeroku, SiGit } from 'react-icons/si'
 import { TiCss3 } from 'react-icons/ti'
 import { HiDatabase } from 'react-icons/hi'
