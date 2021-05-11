@@ -1,16 +1,12 @@
 import React from 'react'
-import { Navbar, Sidebar, Footer } from '../components'
+import { Navbar, Footer } from '../components'
 import { useState } from 'react'
 import styled from 'styled-components'
-import resume from '../images/Sean_Nguyen_Dev2021.pdf'
+// import resume from '../images/Sean_Nguyen_Dev2021.pdf'
 
 
 
 const Resume = () => {
-  const [isOpen, setOpen] = useState(false)
-  const toggleOpen = () => {
-    setOpen(!isOpen)
-  }
 
   return (
     <>
