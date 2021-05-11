@@ -88,7 +88,8 @@ export const MobileIcon = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    display: block;
+    
+    display: ${({ location }) => (location === 'main' ? 'block' : 'none')};
     position: absolute;
     top: 0;
     right: 0;
@@ -109,7 +110,7 @@ export const NavMenu = styled.ul`
   margin-right: 20px;
 
   @media screen and (max-width: 768px) {
-    display: none;
+    display: ${({ location }) => (location === 'resume' ? '' : 'none')};
   }
 `
 export const NavItem = styled.li`
@@ -142,7 +143,7 @@ export const NavBtn = styled.nav`
 
 
   @media screen and (max-width: 768px) {
-    display: none;
+    display: ${({ location }) => (location === 'resume' ? '' : 'none')};
   }
 `
 
@@ -166,4 +167,15 @@ export const NavBtnLink = styled(LinkR)`
     border: 2px solid #f7f8fa;
     color: #f7f8fa
   }
+`
+
+export const NavHome = styled(LinkR)`
+  color: #f7f8fa;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+
 `

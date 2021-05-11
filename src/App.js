@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom'
 
 import './App.css'
-import { Home } from './pages'
+import { Home, Resume } from './pages'
 
 
 const App = () => {
@@ -17,6 +17,9 @@ const App = () => {
         <Switch>
           <Route exact path='/' >
             <Home />
+          </Route>
+          <Route exact path='/resume' >
+            <Resume />
           </Route>
         </Switch>
       </Router>

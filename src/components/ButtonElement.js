@@ -15,14 +15,14 @@ export const Button = styled(Link)`
   justify-content: center;
   align-items: center;
   transition: all 0.2s ease-ease-in-out;
-  color: #1f2833;
   border: 2px solid ;
   
-  background: ${({ primary }) => (primary ? '#66fcf1' : '#fff')};
   
+  background: ${({ primary }) => (primary ? 'transparent' : '#66fcf1')};
   &:hover {
+    background: ${({ primary }) => (primary ? '#66fcf1' : '#fff')};
+    color: #1f2833;
+    /* color: ${({ dark }) => (dark ? '#010606' : '#fff')}; */
     transition: all 0.2s ease-ease-in-out;
-    background: ${({ primary }) => (primary ? 'transparent' : '#66fcf1')};
-    color: ${({ dark }) => (dark ? '#010606' : '#fff')};
   }
 `

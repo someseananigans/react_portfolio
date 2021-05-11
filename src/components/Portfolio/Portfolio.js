@@ -9,7 +9,7 @@ import { FaPassport } from 'react-icons/fa'
 const Portfolio = ({ p1, p2, p3 }) => {
   return (
     <PortContainer id='portfolio'>
-      <TopLine>My Works</TopLine>
+      <TopLine>My Portfolio</TopLine>
       <PortH1>Projects</PortH1>
 
       <PortWrapper>
@@ -32,7 +32,7 @@ const Portfolio = ({ p1, p2, p3 }) => {
           <DetailWrap>
             <AList>
               <Portp>{p1.description}</Portp>
-              <Portp>
+              <Portp style={{ marginTop: '13px' }}>
                 <strong>Features: </strong>
                 <p>{p1.features}</p>
               </Portp>
@@ -71,7 +71,7 @@ const Portfolio = ({ p1, p2, p3 }) => {
           <DetailWrap>
             <AList>
               <Portp>{p2.description}</Portp>
-              <Portp>
+              <Portp style={{ marginTop: '13px' }}>
                 <strong>Features: </strong>
                 <p>{p2.features}</p>
               </Portp>
@@ -130,7 +130,7 @@ const Portfolio = ({ p1, p2, p3 }) => {
 
             <AList>
               <Portp>{p3.description}</Portp>
-              <Portp>
+              <Portp style={{ marginTop: '13px' }}>
                 <strong>Features: </strong>
                 <p>{p3.features}</p>
               </Portp>
@@ -175,52 +175,6 @@ const Portfolio = ({ p1, p2, p3 }) => {
             </IconWrapper>
           </DetailWrap>
         </Wrapper>
-        {/* <TechWrapper>
-          <TechHead>Key</TechHead>
-          <TechHead>Technologies</TechHead>
-          <IconWrapper>
-            <TechIcon>
-              <SiHtml5 />
-              <IconLabel>HTML5</IconLabel>
-            </TechIcon>
-            <TechIcon>
-              <TiCss3 />
-              <IconLabel>CSS3</IconLabel>
-            </TechIcon>
-            <TechIcon>
-              <SiReact />
-              <IconLabel>React</IconLabel>
-            </TechIcon>
-            <TechIcon>
-              <SiJavascript />
-              <IconLabel>Javascript</IconLabel>
-            </TechIcon>
-            <TechIcon>
-              <HiDatabase />
-              <IconLabel>MySQL</IconLabel>
-            </TechIcon>
-            <TechIcon>
-              <SiMongodb />
-              <IconLabel>MongoDB</IconLabel>
-            </TechIcon>
-            <TechIcon>
-              <SiNodeDotJs />
-              <IconLabel>NodeJS</IconLabel>
-            </TechIcon>
-            <TechIcon>
-              <SiFirebase />
-              <IconLabel>Firebase</IconLabel>
-            </TechIcon>
-            <TechIcon>
-              <SiGit />
-              <IconLabel>Git</IconLabel>
-            </TechIcon>
-            <TechIcon>
-              <SiHeroku />
-              <IconLabel>Heroku</IconLabel>
-            </TechIcon>
-          </IconWrapper>
-        </TechWrapper> */}
       </PortWrapper>
     </PortContainer >
   )

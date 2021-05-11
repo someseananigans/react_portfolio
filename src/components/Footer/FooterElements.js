@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 
 
 export const FootContainer = styled.div`
-  background-color: #0b0c10;
+  /* background-color: #0b0c10; */
+  background-color: #010606;
   padding: 20px;
 `
 
@@ -103,7 +104,8 @@ export const SocialLogo = styled(Link)`
 
 export const WebsiteRights = styled.small`
   color: #fff; 
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
+
 `
 
 export const SocialIcons = styled.div`

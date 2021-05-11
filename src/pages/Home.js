@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Sidebar, HeroSection, About, Footer, Contact, Portfolio, Skills } from '../components/'
+import { Navbar, Sidebar, HeroSection, About, Footer, Contact, Portfolio, Skills } from '../components'
 import { useState } from 'react'
 import { aboutMe, colorPalette, projects, skills } from '../Data'
 
@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <>
       <Navbar
-        toggleOpen={toggleOpen} />
+        toggleOpen={toggleOpen} location="main" />
       <Sidebar
         isOpen={isOpen}
         toggleOpen={toggleOpen} />

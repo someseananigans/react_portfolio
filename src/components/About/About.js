@@ -4,7 +4,7 @@ import { Shades } from '..'
 import { InfoContainer, InfoWrapper, InfoRow, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle, BtnWrap, ImgWrapper, Img } from './AboutElements'
 
 
-const InfoSection = ({ id, lightText, lightBg, topLine, headline, description, buttonLabel, imgStart, img, alt, darkText, primary, dark }) => {
+const InfoSection = ({ id, lightText, lightBg, topLine, headline, description, buttonLabel, imgStart, img, alt, darkText, primary, dark, d1, d2, d3 }) => {
   return (
     <>
       <InfoContainer id={id}>
@@ -14,7 +14,11 @@ const InfoSection = ({ id, lightText, lightBg, topLine, headline, description, b
               <TextWrapper>
                 <TopLine>{topLine}</TopLine>
                 <Heading>{headline}</Heading>
-                <Subtitle>{description}</Subtitle>
+                {/* <Subtitle>{description}</Subtitle> */}
+                <Subtitle>
+                  <p style={{ marginBottom: '10px' }}>{d1}{d2}</p>
+                  <p>{d3}</p>
+                </Subtitle>
                 {/* <BtnWrap>
                   <Button to='home'
                     smooth={true}

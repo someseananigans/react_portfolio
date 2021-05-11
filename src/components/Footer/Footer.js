@@ -5,7 +5,7 @@ import { HiOutlineMail } from 'react-icons/hi'
 import { animateScroll as scroll } from 'react-scroll'
 
 
-const Footer = () => {
+const Footer = ({ location }) => {
   const toggleHome = () => {
     scroll.scrollToTop()
   }
@@ -48,7 +48,7 @@ const Footer = () => {
         </LinksContainer> */}
         <SocialMedia>
           <SocialWrap>
-            <SocialLogo to='/' onClick={toggleHome}>Sean</SocialLogo>
+            {/* <SocialLogo to='/' onClick={toggleHome}>Sean</SocialLogo>
             <SocialIcons>
               <IconLink href='/' target='_blank' aria-label='LinkedIn'>
                 <FaLinkedin />
@@ -62,7 +62,7 @@ const Footer = () => {
               <IconLink href='/' target='_blank' aria-label='Instagram'>
                 <FaInstagram />
               </IconLink>
-            </SocialIcons>
+            </SocialIcons> */}
             <WebsiteRights>&copy; {new Date().getFullYear()} Sean Nguyen All rights reserved</WebsiteRights>
 
           </SocialWrap>
