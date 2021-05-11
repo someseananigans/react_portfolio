@@ -1,24 +1,23 @@
 {
   "files": {
     "main.css": "/react_portfolio/static/css/main.fba944f8.chunk.css",
-    "main.js": "/react_portfolio/static/js/main.d60536e7.chunk.js",
-    "main.js.map": "/react_portfolio/static/js/main.d60536e7.chunk.js.map",
+    "main.js": "/react_portfolio/static/js/main.075ac36c.chunk.js",
+    "main.js.map": "/react_portfolio/static/js/main.075ac36c.chunk.js.map",
     "runtime-main.js": "/react_portfolio/static/js/runtime-main.8f0e09ce.js",
     "runtime-main.js.map": "/react_portfolio/static/js/runtime-main.8f0e09ce.js.map",
-    "static/js/2.12c3eba0.chunk.js": "/react_portfolio/static/js/2.12c3eba0.chunk.js",
-    "static/js/2.12c3eba0.chunk.js.map": "/react_portfolio/static/js/2.12c3eba0.chunk.js.map",
+    "static/js/2.6584b2bb.chunk.js": "/react_portfolio/static/js/2.6584b2bb.chunk.js",
+    "static/js/2.6584b2bb.chunk.js.map": "/react_portfolio/static/js/2.6584b2bb.chunk.js.map",
     "index.html": "/react_portfolio/index.html",
     "static/css/main.fba944f8.chunk.css.map": "/react_portfolio/static/css/main.fba944f8.chunk.css.map",
-    "static/js/2.12c3eba0.chunk.js.LICENSE.txt": "/react_portfolio/static/js/2.12c3eba0.chunk.js.LICENSE.txt",
+    "static/js/2.6584b2bb.chunk.js.LICENSE.txt": "/react_portfolio/static/js/2.6584b2bb.chunk.js.LICENSE.txt",
     "static/media/FreeMarket.8a30f5f7.png": "/react_portfolio/static/media/FreeMarket.8a30f5f7.png",
-    "static/media/Sean_Nguyen_Dev2021.8e2de2ab.pdf": "/react_portfolio/static/media/Sean_Nguyen_Dev2021.8e2de2ab.pdf",
     "static/media/svg-1.72e40560.svg": "/react_portfolio/static/media/svg-1.72e40560.svg",
     "static/media/video.7d1ea6a9.mp4": "/react_portfolio/static/media/video.7d1ea6a9.mp4"
   },
   "entrypoints": [
     "static/js/runtime-main.8f0e09ce.js",
-    "static/js/2.12c3eba0.chunk.js",
+    "static/js/2.6584b2bb.chunk.js",
     "static/css/main.fba944f8.chunk.css",
-    "static/js/main.d60536e7.chunk.js"
+    "static/js/main.075ac36c.chunk.js"
   ]
 }
