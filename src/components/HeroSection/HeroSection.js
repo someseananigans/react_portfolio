@@ -26,6 +26,11 @@ const HeroSection = () => {
               onMouseEnter={onHover}
               onMouseLeave={onHover}
               primary='true'
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact={true}
+              offset={-80}
             >
               Connect {hover ? <ArrowForward /> : <ArrowRight />}
             </Button>
