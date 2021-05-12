@@ -19,7 +19,7 @@ const Resume = () => {
           {/* <iframe src={resume + '#toolbar=0'} width="100%" height="100%" frameborder="0"></iframe> */}
           {/* <embed src={resume + '#toolbar=0&zoom=100'} type="application/pdf" width='100%' height='100%'></embed> */}
 
-          <iframe src="https://drive.google.com/file/d/1hAha1Jdio4fyZ9ZLsEGq1XA5VgZcLEaT/preview" width="100%" height="100%"></iframe>
+          <iframe src="https://drive.google.com/file/d/145erI4NIYh0HUE3PjCP-6yqPJc53oSR9/preview" width="100%" height="100%"></iframe>
 
         </Wrapper>
       </Container>
