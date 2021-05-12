@@ -63,7 +63,7 @@ const Footer = ({ location }) => {
                 <FaInstagram />
               </IconLink>
             </SocialIcons> */}
-            <WebsiteRights>&copy; {new Date().getFullYear()} Sean Nguyen All rights reserved</WebsiteRights>
+            <WebsiteRights style={{ cursor: "pointer" }} onClick={toggleHome}>&copy; {new Date().getFullYear()} Sean Nguyen All rights reserved</WebsiteRights>
 
           </SocialWrap>
         </SocialMedia>
