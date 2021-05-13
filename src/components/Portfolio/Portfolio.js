@@ -1,7 +1,7 @@
 import React from 'react'
 import { PortContainer, PortH1, PortWrapper, PortCard, PortIcon, PortH2, Portp, Wrapper, Overlay, IconWrapper, TechIcon, PortLinkButton, DetailWrap, TopLine, AList, TipText } from './PortfolioElements'
 import image1 from '../../images/svg-1.svg'
-import { SiJavascript, SiHtml5, SiCss3, SiMongodb, SiReact, SiNodeDotJs, SiFirebase, SiHeroku, SiGit, SiGithub } from 'react-icons/si'
+import { SiJavascript, SiHtml5, SiMongodb, SiReact, SiNodeDotJs, SiFirebase, SiGithub } from 'react-icons/si'
 import { TiCss3 } from 'react-icons/ti'
 import { HiDatabase, HiLink } from 'react-icons/hi'
 import { FaPassport } from 'react-icons/fa'
@@ -34,7 +34,7 @@ const Portfolio = ({ p1, p2, p3 }) => {
               <Portp>{p1.description}</Portp>
               <Portp style={{ marginTop: '13px' }}>
                 <strong>Features: </strong>
-                <p>{p1.features}</p>
+                <span style={{ display: 'inline-block' }}>{p1.features}</span>
               </Portp>
             </AList>
             <IconWrapper>
@@ -73,7 +73,7 @@ const Portfolio = ({ p1, p2, p3 }) => {
               <Portp>{p2.description}</Portp>
               <Portp style={{ marginTop: '13px' }}>
                 <strong>Features: </strong>
-                <p>{p2.features}</p>
+                <span style={{ display: 'inline-block' }}>{p2.features}</span>
               </Portp>
             </AList>
             <IconWrapper>
@@ -132,7 +132,7 @@ const Portfolio = ({ p1, p2, p3 }) => {
               <Portp>{p3.description}</Portp>
               <Portp style={{ marginTop: '13px' }}>
                 <strong>Features: </strong>
-                <p>{p3.features}</p>
+                <span style={{ display: 'inline-block' }}>{p3.features}</span>
               </Portp>
             </AList>
             <IconWrapper style={{ width: '245px' }}>

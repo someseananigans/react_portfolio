@@ -1,10 +1,9 @@
 import React from 'react'
-import { Button } from '../ButtonElement'
 import { Shades } from '..'
-import { InfoContainer, InfoWrapper, InfoRow, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle, BtnWrap, ImgWrapper, Img } from './AboutElements'
+import { InfoContainer, InfoWrapper, InfoRow, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle, ImgWrapper } from './AboutElements'
 
 
-const InfoSection = ({ id, lightText, lightBg, topLine, headline, description, buttonLabel, imgStart, img, alt, darkText, primary, dark, d1, d2, d3 }) => {
+const About = ({ id, lightText, lightBg, topLine, headline, description, buttonLabel, imgStart, img, alt, darkText, primary, dark, d1, d2, d3 }) => {
   return (
     <>
       <InfoContainer id={id}>
@@ -45,4 +44,4 @@ const InfoSection = ({ id, lightText, lightBg, topLine, headline, description, b
   )
 }
 
-export default InfoSection
+export default About

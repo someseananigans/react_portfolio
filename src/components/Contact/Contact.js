@@ -4,7 +4,6 @@ import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 
 const Contact = ({ colorScheme }) => {
-  console.log(colorScheme)
   return (
     <>
       <ContactDisplay color={colorScheme} id='contact'>

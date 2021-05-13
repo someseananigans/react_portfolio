@@ -61,7 +61,7 @@ const Navbar = ({ toggleOpen, location }) => {
           </MobileIcon>
           <NavBtn location={location}>
             <NavMenu location={location}>
-              {location == 'main' ? (
+              {location === 'main' ? (
                 <>
                   <NavItem>
                     <NavLink
@@ -69,7 +69,7 @@ const Navbar = ({ toggleOpen, location }) => {
                       smooth={true}
                       duration={500}
                       spy={true}
-                      exact={true}
+                      // exact={true}
                       offset={-80}
                     >About</NavLink>
                   </NavItem>
@@ -79,7 +79,7 @@ const Navbar = ({ toggleOpen, location }) => {
                       smooth={true}
                       duration={500}
                       spy={true}
-                      exact={true}
+                      // exact={true}
                       offset={-80}
                     >Discover</NavLink>
                   </NavItem>
@@ -89,7 +89,7 @@ const Navbar = ({ toggleOpen, location }) => {
                       smooth={true}
                       duration={500}
                       spy={true}
-                      exact={true}
+                      // exact={true}
                       offset={-80}
                     >Portfolio</NavLink>
                   </NavItem>
@@ -99,7 +99,7 @@ const Navbar = ({ toggleOpen, location }) => {
                       smooth={true}
                       duration={500}
                       spy={true}
-                      exact={true}
+                      // exact={true}
                       offset={-80}
                     >Contact</NavLink>
                   </NavItem>
@@ -111,7 +111,7 @@ const Navbar = ({ toggleOpen, location }) => {
               )}
             </NavMenu>
 
-            {location == 'main' ?
+            {location === 'main' ?
               (<NavBtnLink to="/resume" >Resume</NavBtnLink>) :
               (<NavBtnLink to="insert Download" >Download</NavBtnLink>)
             }

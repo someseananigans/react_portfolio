@@ -1,7 +1,5 @@
 import React from 'react'
-import { FootContainer, FooterWrap, LinksContainer, LinksWrapper, LinkItems, LinkTitle, FootLink, SocialMedia, SocialWrap, SocialLogo, WebsiteRights, SocialIcons, IconLink } from './FooterElements'
-import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa'
-import { HiOutlineMail } from 'react-icons/hi'
+import { FootContainer, FooterWrap, SocialMedia, SocialWrap, WebsiteRights } from './FooterElements'
 import { animateScroll as scroll } from 'react-scroll'
 
 

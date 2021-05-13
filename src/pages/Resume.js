@@ -1,31 +1,52 @@
 import React from 'react'
-import { Navbar, Footer } from '../components'
-import { useState } from 'react'
+import { Navbar, Footer, SpinnerLoad } from '../components'
+import { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import { Appear } from '../components/SpinnerLoad/SpinElements'
 // import resume from '../images/Sean_Nguyen_Dev2021.pdf'
 
 
 
 const Resume = () => {
 
+  const [isLoading, setLoading] = useState(true)
+  const [back, setBack] = useState(false)
+
+  useEffect(() => {
+    setLoading(true)
+    setBack(false)
+    setTimeout(() => {
+      setLoading(false)
+    }, 2000);
+    setTimeout(() => {
+      setBack(true)
+    }, 3000);
+  }, [])
+
   return (
     <>
-      <Navbar
-        location='resume' />
 
-      <Container>
-        <Wrapper>
+      <SpinnerLoad back={back} />
 
-          {/* <iframe src={resume + '#toolbar=0'} width="100%" height="100%" frameborder="0"></iframe> */}
-          {/* <embed src={resume + '#toolbar=0&zoom=100'} type="application/pdf" width='100%' height='100%'></embed> */}
+      <Appear isLoading={isLoading}>
 
-          <iframe src="https://drive.google.com/file/d/145erI4NIYh0HUE3PjCP-6yqPJc53oSR9/preview" width="100%" height="100%"></iframe>
+        <Navbar
+          location='resume' />
 
-        </Wrapper>
-      </Container>
+        <Container>
+          <Wrapper>
+
+            {/* <iframe src={resume + '#toolbar=0'} width="100%" height="100%" frameborder="0"></iframe> */}
+            {/* <embed src={resume + '#toolbar=0&zoom=100'} type="application/pdf" width='100%' height='100%'></embed> */}
+
+            <iframe title="Developer Resume" src="https://drive.google.com/file/d/145erI4NIYh0HUE3PjCP-6yqPJc53oSR9/preview" width="100%" height="100%"></iframe>
+
+          </Wrapper>
+        </Container>
 
 
-      <Footer location='resume' />
+        <Footer location='resume' />
+      </Appear>
 
     </>
   )

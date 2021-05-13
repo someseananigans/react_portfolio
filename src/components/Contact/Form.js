@@ -122,7 +122,8 @@ const Form = (colorScheme) => {
           label="Name"
           variant="filled"
           helperText={name.text}
-          spacing={spacing} />
+        // spacing={spacing} 
+        />
         <InputField
           onChange={handleInputChange}
           error={email.error}
@@ -131,7 +132,8 @@ const Form = (colorScheme) => {
           label="Email"
           variant="filled"
           helperText={email.text}
-          spacing={spacing} />
+        // spacing={spacing} 
+        />
         <InputField
           multiline
           rows={7}
@@ -142,7 +144,8 @@ const Form = (colorScheme) => {
           label="Message"
           variant="filled"
           helperText={message.text}
-          spacing={spacing} />
+        // spacing={spacing} 
+        />
         <FormBtn
           variant='outlined'
           coloroverwrite={colorScheme}
