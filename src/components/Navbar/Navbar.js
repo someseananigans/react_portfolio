@@ -56,7 +56,7 @@ const Navbar = ({ toggleOpen, location }) => {
             </ShowWrapper>
           </LogoWrapper>
 
-          <MobileIcon locationg={location} onClick={toggleOpen}>
+          <MobileIcon location={location} onClick={toggleOpen}>
             <FaBars />
           </MobileIcon>
           <NavBtn location={location}>
