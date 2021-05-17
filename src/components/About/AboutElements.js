@@ -4,10 +4,6 @@ import styled from 'styled-components'
 export const InfoContainer = styled.div`
   color: #fff;
   background: #0b0c10;
-
-  @media screen and (max-width: 768px) {
-    padding: 100px 0;
-  }
 `
 
 export const InfoWrapper = styled.div`
@@ -20,12 +16,17 @@ export const InfoWrapper = styled.div`
   margin-left: auto;
   padding: 0 24px;
   justify-content: center;
+
+  @media screen and (max-width: 768) {
+    height: 100%;
+  }
 `
 
 export const InfoRow = styled.div`
   display: grid;
   grid-auto-columns: minmax(auto, 1fr);
   align-items: center;
+  margin: 100px 0;
   grid-template-areas: ${({ imgStart }) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
   @media screen and (max-width: 768px) {
