@@ -9,7 +9,7 @@ const Contact = ({ colorScheme }) => {
       <ContactDisplay color={colorScheme} id='contact'>
         <ContactContainer>
           <ContactRow>
-            <ContactColumn>
+            <Column1>
               <TextWrapper>
                 <Heading color={colorScheme}>Shoot me a message!</Heading>
                 <Spiel color={colorScheme}>From collaborative projects to sharing ideas</Spiel>
@@ -45,10 +45,10 @@ const Contact = ({ colorScheme }) => {
                   </IconLink>
                 </SocialIcons>
               </TextWrapper>
-            </ContactColumn>
-            <ContactColumn>
+            </Column1>
+            <Column2>
               <Form {...colorScheme} />
-            </ContactColumn>
+            </Column2>
           </ContactRow>
         </ContactContainer>
       </ContactDisplay>
@@ -70,14 +70,17 @@ const ContactDisplay = styled.div`
   background: #010606;
   /* background: ${({ color }) => (color[0])}; */
   
-  @media screen and (max-width: 768px) {
-    height: 1100px;
+  @media screen and (max-width: 960px) {
+    height: 100%;
   }
-  @media screen and (max-width: 480px) {
+  /* @media screen and (max-width: 480px) {
     height: 1300px;
-  }
+  } */
 `
 const ContactContainer = styled.div`
+display: flex;
+    justify-content: center;
+height: 100%;
   z-index: 1;
   width: 100%;
   max-width: 1300px;
@@ -101,12 +104,23 @@ const ContactContainer = styled.div`
 `
 
 const ContactRow = styled.div`
-  display: flex;
+  /* display: flex;
 
   flex-wrap: wrap;
   align-items: center;
   // Column on top will start on the left
-  flex-direction: row;
+  flex-direction: row; */
+
+  text-align: center;
+  display: grid;
+  grid-auto-columns: minmax(auto, 1fr);
+  align-items: center;
+  margin: 100px 0;
+  grid-template-areas: ${({ imgStart }) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
+
+  @media screen and (max-width: 960px) {
+    grid-template-areas: ${({ imgStart }) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
+  }
 `
 const ContactColumn = styled.div`
   margin-bottom: 15px;
@@ -128,6 +142,17 @@ const ContactColumn = styled.div`
     padding-left: 0;
 }
 `
+const Column1 = styled.div`
+  margin-bottom: 15px;
+  padding: 0 15px;
+  grid-area: col1;
+`
+const Column2 = styled.div`
+  margin-bottom: 15px;
+  padding: 0 15px;
+  grid-area: col2;
+`
+
 const TextWrapper = styled.div`
   max-width: 540px;
   padding-top: 0;

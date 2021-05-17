@@ -237,7 +237,7 @@ const FormBtn = styled.button`
 `
 const FormBox = styled.div`
   height: 520px;
-  max-width: 500px;
+  /* max-width: 500px; */
   width: 100%;
   box-shadow: 15px 15px 0px 0px white;
   background: #1c242fc2;
@@ -248,7 +248,10 @@ const FormBox = styled.div`
   align-items: center;
 
   @media screen and (max-width: 600px) {
-    max-width: 100%
+    max-width: 100%;
+  }
+  @media screen and (max-width: 960px) {
+    box-shadow: none;
   }
 `
 
