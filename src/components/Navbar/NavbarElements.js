@@ -40,6 +40,10 @@ export const NavLogo = styled(LinkR)`
   font-weight: bold;
   text-decoration: none;
 `
+// export const NavLogoP = styled.p`
+//   display: ${({ showTitle }) => (!showTitle ? '' : 'none')};
+//   opacity: ${({ showTitle }) => (!showTitle ? '100%' : '0')};
+// `
 
 export const LogoWrapper = styled.div`
   display: flex;
@@ -48,6 +52,7 @@ export const LogoWrapper = styled.div`
   color: #f7f8fa;
   width: 200px;
   flex-grow: 1;
+  height: 100%;
 `
 export const ShowWrapper = styled.div`
   display: flex;
@@ -55,10 +60,10 @@ export const ShowWrapper = styled.div`
   align-self: center;
   color: #f7f8fa;
   flex-direction: column;
-  margin-left: 20px;
+  margin-left: 10px;
   transition: all 0.2s ease-in-out;
-  visibility: ${({ showTitle }) => (showTitle ? 'visible' : 'hidden')};
-  opacity: ${({ showTitle }) => (showTitle ? '100%' : '0')};
+  /* visibility: ${({ showTitle }) => (showTitle ? 'visible' : 'hidden')}; */
+  /* opacity: ${({ showTitle }) => (showTitle ? '100%' : '0')}; */
 
   @media screen and (max-width: 1000px) {
     visibility: hidden;
