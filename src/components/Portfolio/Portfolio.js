@@ -10,7 +10,7 @@ const Portfolio = ({ p1, p2, p3 }) => {
   return (
     <PortContainer id='portfolio'>
       <TopLine>My Portfolio</TopLine>
-      <PortH1>Projects</PortH1>
+      <PortH1>Experience</PortH1>
 
       <PortWrapper>
 
