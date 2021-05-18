@@ -48,7 +48,7 @@ export const TechWrapper = styled.div`
 export const InfoContainer = styled.div`
   color: #fff;
   /* background: ${({ lightBg }) => (lightBg ? '#f9f9f9' : '#010606')}; */
-  background: linear-gradient(to bottom, white, #a6f2f7);
+  background: linear-gradient(to bottom, white 50%, #98fff7);
   height: 860px;
 
   /* @media screen and (max-width: 768px) {
