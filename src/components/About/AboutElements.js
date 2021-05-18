@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 export const InfoContainer = styled.div`
   color: #fff;
-  /* background: #0b0c10; */
-  background: linear-gradient(to left, #0b0c10 50%, #515151);
+  background: #0b0c10;
+  /* background: linear-gradient(to left, #0b0c10 50%, #515151); */
 `
 
 export const InfoWrapper = styled.div`
@@ -77,7 +77,7 @@ export const Heading = styled.h1`
 export const Subtitle = styled.div`
   max-width: 480px;
   margin-bottom: 35px;
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 24px;
   color: #f7f8fa;
 `
