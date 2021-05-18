@@ -2,10 +2,11 @@ import { useState, useEffect } from 'react'
 import {
   Nav, NavContainer, NavLogo,
   MobileIcon, NavMenu, NavItem, NavLink, NavHome,
-  NavBtn, NavBtnLink, NavTitle, NavDescription, LogoWrapper, ShowWrapper
+  NavBtn, NavBtnLink, NavTitle, NavDescription, LogoWrapper, ShowWrapper, NavLogoP
 } from './NavbarElements'
 import { FaBars } from 'react-icons/fa'
 import { animateScroll as scroll } from 'react-scroll'
+import logo from '../../images/logo.png'
 
 
 const Navbar = ({ toggleOpen, location }) => {
@@ -48,9 +49,11 @@ const Navbar = ({ toggleOpen, location }) => {
         <NavContainer>
 
           <LogoWrapper>
-            <NavLogo to="/" onClick={toggleHome}>Sean</NavLogo>
+            <NavLogo to="/" onClick={toggleHome}>
+              <img height='50px' src={logo} alt="logo" />
+              <NavLogoP showTitle={showTitle}>Sean</NavLogoP>
+            </NavLogo>
             <ShowWrapper showTitle={showTitle}>
-
               <NavTitle>Sean</NavTitle>
               <NavDescription>Full Stack Developer</NavDescription>
             </ShowWrapper>
