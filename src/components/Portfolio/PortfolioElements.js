@@ -6,7 +6,8 @@ export const PortContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #0b0c10;
+  background:#23272a;
+  /* background: #0b0c10; */
 
   @media screen and (max-width: 830px) {
     padding: 100px 0;
