@@ -67,7 +67,8 @@ const ContactDisplay = styled.div`
   color: #fff;
   display: flex;
   align-items: center;
-  background: #010606;
+  background: white;
+  /* background: #010606; */
   /* background: ${({ color }) => (color[0])}; */
   
   @media screen and (max-width: 960px) {
@@ -172,7 +173,7 @@ const Heading = styled.h1`
   margin-bottom: 10px;
   font-size: 48px;
   line-height: 1.1.%;
-  color: ${({ color }) => (color[5])};
+  color: ${({ color }) => (color[2])};
 `
 
 const Spiel = styled.p`
@@ -180,7 +181,7 @@ const Spiel = styled.p`
   margin-bottom: 9px;
   font-size: 20px;
   line-height: 24px;
-  color: ${({ color }) => (color[2])};
+  color: ${({ color }) => (color[1])};
   padding: 0 20px;
 `
 const Tagline = styled.p`
@@ -189,7 +190,7 @@ const Tagline = styled.p`
   font-size: 25px;
   font-weight: 700;
   line-height: 24px;
-  color: ${({ color }) => (color[4])};
+  color: ${({ color }) => (color[6])};
   padding: 0 20px;
 `
 
@@ -218,7 +219,7 @@ const SocialIcons = styled.div`
   /* width: 240px; */
   `
 const IconLink = styled.a`
-  color: #fff;
+  color: #1c242f;
   font-size: 28px;
   margin: 15px;
 
