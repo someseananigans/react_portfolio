@@ -24,7 +24,8 @@ export const TechIcon = styled.div`
   /* margin-left: 10px; */
 
   &:hover {
-    background-color: #45a29e;
+    /* background-color: #45a29e; */
+    background-color: #bcd5d7;
     cursor: pointer;
     border-radius: 5px;
   }
@@ -46,7 +47,8 @@ export const TechWrapper = styled.div`
 
 export const InfoContainer = styled.div`
   color: #fff;
-  background: ${({ lightBg }) => (lightBg ? '#f9f9f9' : '#010606')};
+  /* background: ${({ lightBg }) => (lightBg ? '#f9f9f9' : '#010606')}; */
+  background: linear-gradient(to bottom, white, #a6f2f7);
   height: 860px;
 
   /* @media screen and (max-width: 768px) {
