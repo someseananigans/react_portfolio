@@ -3,7 +3,8 @@ import styled from 'styled-components'
 
 export const InfoContainer = styled.div`
   color: #fff;
-  background: #0b0c10;
+  /* background: #0b0c10; */
+  background: linear-gradient(to left, #0b0c10 50%, #515151);
 `
 
 export const InfoWrapper = styled.div`
