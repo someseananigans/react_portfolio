@@ -92,7 +92,7 @@ export const skills = {
   lightTextDesc: false,
   topLine: 'My Skills',
   headline: 'User Experience Development',
-  description: 'From user stories and wireframes to design and functionality I aim to provide user friendly applications that solve customer software development needs. ',
+  description: 'From user stories and wireframes to design and functionality, I aim to provide user friendly applications that solve customer software development needs. ',
   // buttonLabel: 'Get Started',
   imgStart: true,
   img: codeThink,
