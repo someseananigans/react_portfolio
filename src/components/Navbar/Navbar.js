@@ -51,7 +51,7 @@ const Navbar = ({ toggleOpen, location }) => {
           <LogoWrapper>
             <NavLogo to="/" onClick={toggleHome}>
               <img height='50px' src={logo} alt="logo" />
-              <NavLogoP showTitle={showTitle}>Sean</NavLogoP>
+              {/* <NavLogoP showTitle={showTitle}>Sean</NavLogoP> */}
             </NavLogo>
             <ShowWrapper showTitle={showTitle}>
               <NavTitle>Sean</NavTitle>
