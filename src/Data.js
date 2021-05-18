@@ -4,7 +4,7 @@ import codeThink from './images/svg-1.svg'
 
 
 export const colorPalette = {
-  colorScheme: [
+  colorScheme2: [
     '#0b0c10',
     '#1f2833',
     '#c5c6c7',
@@ -13,7 +13,7 @@ export const colorPalette = {
     '#f7f8fa',
     '#00dbcd'
   ],
-  colorScheme2: [
+  colorScheme: [
     '#010606',
     '#0b0c10',
     '#1c242f',
