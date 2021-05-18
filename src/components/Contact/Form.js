@@ -167,19 +167,19 @@ export default Form
 const CssTextField = withStyles({
   root: {
     '& .MuiFilledInput-underline:after': {
-      borderBottomColor: colorScheme[3],
+      borderBottomColor: colorScheme[5],
     },
     '& .MuiFilledInput-root': {
       backgroundColor: 'transparent'
     },
     '& .MuiFilledInput-input': {
-      color: colorScheme[5],
+      color: colorScheme[4],
     },
     '& .MuiFormLabel-root': {
-      color: colorScheme[2],
+      color: colorScheme[4],
     },
     '& .MuiFilledInput-underline:before': {
-      borderBottomColor: colorScheme[2],
+      borderBottomColor: colorScheme[3],
     },
     '& .MuiFormLabel-root.Mui-error': {
       color: '#f44336',
@@ -239,8 +239,8 @@ const FormBox = styled.div`
   height: 520px;
   /* max-width: 500px; */
   width: 100%;
-  box-shadow: 15px 15px 0px 0px white;
-  background: #1c242fc2;
+  box-shadow: 15px 15px 25px 0px #1f2833;
+  background: #1f2833;
   /* background: ${({ color }) => color[1]}; */
   display: flex;
   flex-direction: column;
