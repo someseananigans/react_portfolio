@@ -42,7 +42,7 @@ const Home = () => {
         <Skills {...skills} />
         <Portfolio {...projects} />
         <Contact {...colorPalette} />
-        <Footer />
+        {/* <Footer /> */}
       </Appear>
 
     </>
