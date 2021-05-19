@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { HeroContainer, HeroBg, VideoBg, ArrowRight, ArrowForward, HeroBtnWrapper, HeroContent, HeroH1, HeroP } from './HeroElements'
-import codebg from '../../images/codebg.gif'
 import { Button } from '../ButtonElement'
 
 
@@ -15,7 +14,9 @@ const HeroSection = () => {
     <>
       <HeroContainer id="home">
         <HeroBg>
-          <VideoBg src={codebg} alt='code_background' />
+          <VideoBg loop muted autoPlay>
+            <source src="https://portawsbucket.s3-us-west-1.amazonaws.com/portHero.mp4" type="video/mp4" />
+          </VideoBg>
         </HeroBg>
         <HeroContent>
           <HeroH1>Hi, I'm Sean</HeroH1>
