@@ -1,5 +1,4 @@
 import {
-  HashRouter as Router,
   Route,
   Switch
 } from 'react-router-dom'
@@ -12,17 +11,15 @@ const App = () => {
 
   return (
     <div id="main">
-
-      <Router>
-        <Switch>
-          <Route exact path='/' >
-            <Home />
-          </Route>
-          <Route exact path='/resume' >
-            <Resume />
-          </Route>
-        </Switch>
-      </Router>
+      <Switch>
+        <Route exact path='/' >
+          <Home />
+        </Route>
+        <Route exact path='/resume' >
+          <Resume />
+        </Route>
+        {/* enter 404 page */}
+      </Switch>
     </div>
   )
 }
