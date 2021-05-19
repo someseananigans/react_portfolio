@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import TextField from '@material-ui/core/TextField';
 // import Button from '@material-ui/core/Button'
 import { colorPalette } from '../../Data';
+import emailjs from 'emailjs-com'
 
 const { colorScheme } = colorPalette
 
@@ -13,68 +14,64 @@ const Form = (colorScheme) => {
   const [formState, setFormState] = useState({
     name: {
       value: '',
-      error: false,
-      text: ''
+      error: ''
     },
     email: {
       value: '',
-      error: false,
-      text: '',
+      error: '',
     },
     message: {
       value: '',
-      error: false,
-      text: ''
+      error: ''
     }
   })
 
   const handleValidation = () => {
     let eErrText, nErrText, mErrText = ''
     let emailValid = formState.email.value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
-    let errE = !emailValid
-    if (errE) { eErrText = `Hmm... I can't find your email` }
+    if (!emailValid) { eErrText = `Hmm... I can't find your email` }
     let contName = formState.name.value.length >= 1
-    let errN = !contName
-    if (errN) { nErrText = `Sorry, I didn't get your name` }
+    if (!contName) { nErrText = `Sorry, I didn't get your name` }
     let contMessage = formState.message.value.length >= 1
-    let errM = !contMessage
-    if (errM) { mErrText = `Don't forget the message~` }
-    if (errE || errN || errM) { setSpacing(false) } else { setSpacing(true) }
+    if (!contMessage) { mErrText = `Don't forget the message~` }
 
     setFormState({
       ...formState,
       email: {
         ...formState.email,
-        error: errE,
-        text: eErrText
+        error: eErrText
       },
       name: {
         ...formState.name,
-        error: errN,
-        text: nErrText
+        error: nErrText
       },
       message: {
         ...formState.message,
-        error: errM,
-        text: mErrText
+        error: mErrText
       }
     })
   }
 
-  const [spacing, setSpacing] = useState(true)
+  const sendEmail = () => {
+    emailjs.send("service_ld92v8k", "template_am2pbum", {
+      name: formState.name.value,
+      email: formState.email.value,
+      message: formState.message.value
+    }, 'user_MtxWh9NUZ8TCL3fwtGgwM')
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault()
     handleValidation()
     //if error do not submit and set error
-    if (!formState.email.error) {
-      console.log(formState.email.error)
+    if (formState.email.error || formState.name.error || formState.message.error) {
+      console.log('Form is not complete')
 
     }
     // set message and contact info to be an email sent to you
     else {
-      console.log('error')
-
+      sendEmail()
+      console.log('email sent')
     }
   }
 
@@ -121,8 +118,7 @@ const Form = (colorScheme) => {
           name="name"
           label="Name"
           variant="filled"
-          helperText={name.text}
-        // spacing={spacing} 
+          helperText={name.error}
         />
         <InputField
           onChange={handleInputChange}
@@ -131,8 +127,7 @@ const Form = (colorScheme) => {
           name="email"
           label="Email"
           variant="filled"
-          helperText={email.text}
-        // spacing={spacing} 
+          helperText={email.error}
         />
         <InputField
           multiline
@@ -143,8 +138,7 @@ const Form = (colorScheme) => {
           name="message"
           label="Message"
           variant="filled"
-          helperText={message.text}
-        // spacing={spacing} 
+          helperText={message.error}
         />
         <FormBtn
           variant='outlined'
@@ -155,8 +149,6 @@ const Form = (colorScheme) => {
       </FormBtn>
       </FormWrapper>
     </FormBox>
-
-
   )
 }
 
@@ -207,7 +199,7 @@ const FormWrapper = styled.form`
 
 const InputField = styled(CssTextField)`
   width: 90%;
-  margin-bottom: ${({ spacing }) => (spacing ? '20px !important' : '10px !important')};
+  margin-bottom: 10px !important;
 `
 
 const FormBtn = styled.button`
