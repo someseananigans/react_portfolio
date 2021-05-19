@@ -2,11 +2,12 @@ import { useState, useEffect } from 'react'
 import {
   Nav, NavContainer, NavLogo,
   MobileIcon, NavMenu, NavItem, NavLink, NavHome,
-  NavBtn, NavBtnLink, NavTitle, NavDescription, LogoWrapper, ShowWrapper, NavLogoP
+  NavBtn, NavBtnLink, ResBtnLink, NavTitle, NavDescription, LogoWrapper, ShowWrapper, NavLogoP
 } from './NavbarElements'
 import { FaBars } from 'react-icons/fa'
 import { animateScroll as scroll } from 'react-scroll'
 import logo from '../../images/logo.png'
+import resume from '../../images/Resume.pdf'
 
 
 const Navbar = ({ toggleOpen, location }) => {
@@ -53,7 +54,7 @@ const Navbar = ({ toggleOpen, location }) => {
               <img height='50px' src={logo} alt="logo" />
               {/* <NavLogoP showTitle={showTitle}>Sean</NavLogoP> */}
             </NavLogo>
-            <ShowWrapper showTitle={showTitle}>
+            <ShowWrapper to="/" onClick={toggleHome} showTitle={showTitle}>
               <NavTitle>Sean</NavTitle>
               <NavDescription>Full Stack Developer</NavDescription>
             </ShowWrapper>
@@ -84,7 +85,7 @@ const Navbar = ({ toggleOpen, location }) => {
                       spy={true}
                       // exact={true}
                       offset={-80}
-                    >Discover</NavLink>
+                    >Skills</NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink
@@ -116,7 +117,7 @@ const Navbar = ({ toggleOpen, location }) => {
 
             {location === 'main' ?
               (<NavBtnLink to="/resume" >Resume</NavBtnLink>) :
-              (<NavBtnLink to="insert Download" >Download</NavBtnLink>)
+              (<ResBtnLink href={resume} download="Sean_Nguyen - Resume2021" >Download</ResBtnLink>)
             }
 
           </NavBtn>

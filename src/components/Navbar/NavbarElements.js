@@ -54,7 +54,8 @@ export const LogoWrapper = styled.div`
   flex-grow: 1;
   height: 100%;
 `
-export const ShowWrapper = styled.div`
+export const ShowWrapper = styled(LinkR)`
+text-decoration: none;
   display: flex;
   justify-self: flex-start;
   align-self: center;
@@ -153,6 +154,27 @@ export const NavBtn = styled.nav`
 `
 
 export const NavBtnLink = styled(LinkR)`
+  border-radius: 10px;
+  background: #00dbcd;
+  white-space: nowrap;
+  padding: 10px 22px;
+  color: #0b0c10;
+  font-size: 16px;
+  outline: none;
+  border: none; 
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  border: 2px solid transparent;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: transparent;
+    border: 2px solid #f7f8fa;
+    color: #f7f8fa
+  }
+`
+export const ResBtnLink = styled.a`
   border-radius: 10px;
   background: #00dbcd;
   white-space: nowrap;
