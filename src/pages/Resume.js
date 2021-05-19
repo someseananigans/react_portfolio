@@ -13,6 +13,7 @@ const Resume = () => {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
+    document.title = 'Resume - Sean Nguyen'
     setBack(false)
     setIsLoading(false)
     setTimeout(() => {

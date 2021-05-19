@@ -14,6 +14,7 @@ const Home = () => {
   const [back, setBack] = useState(false)
 
   useEffect(() => {
+    document.title = 'Portfolio - Sean Nguyen'
     setLoading(true)
     setBack(false)
     setTimeout(() => {
