@@ -67,7 +67,7 @@ const ContactDisplay = styled.div`
   color: #fff;
   display: flex;
   align-items: center;
-  linear-gradient(to bottom, white 50%, rgb(152, 255, 247));
+  background: linear-gradient(to bottom, white 50%, rgb(152, 255, 247));
   /* background: white; */
   /* background: #010606; */
   /* background: ${({ color }) => (color[0])}; */
@@ -178,8 +178,8 @@ const Heading = styled.h1`
 `
 
 const Spiel = styled.p`
-  max-width: 440px;
-  margin-bottom: 9px;
+  /* max-width: 440px; */
+  margin-bottom: 15px;
   font-size: 20px;
   line-height: 24px;
   color: ${({ color }) => (color[1])};
@@ -210,6 +210,7 @@ const TipText = styled.span`
   width: 130px;
   margin-left: -65px;
   left: 50%;
+  transition: all .2s ease-in-out;
 `
 
 
@@ -223,10 +224,12 @@ const IconLink = styled.a`
   color: #1c242f;
   font-size: 28px;
   margin: 15px;
+  transition: all .2s ease-in-out;
+  top: 30px;
 
   &:hover ${TipText} {
     visibility: visible;
-    top: 42px;
+    top: 37px;
     /* left: -13px; */
 
   }
