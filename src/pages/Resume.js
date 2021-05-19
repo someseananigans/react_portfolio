@@ -9,26 +9,27 @@ import { Appear } from '../components/SpinnerLoad/SpinElements'
 
 const Resume = () => {
 
-  const [isLoading, setLoading] = useState(true)
   const [back, setBack] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    setLoading(true)
     setBack(false)
+    setIsLoading(false)
     setTimeout(() => {
-      setLoading(false)
+      setIsLoading(true)
     }, 2000);
     setTimeout(() => {
       setBack(true)
-    }, 3000);
+    }, 3500);
   }, [])
 
   return (
     <>
 
-      <SpinnerLoad back={back} />
 
-      <Appear isLoading={isLoading}>
+
+      <SpinnerLoad back={back} />
+      <Main isLoading={isLoading}>
 
         <Navbar
           location='resume' />
@@ -39,14 +40,14 @@ const Resume = () => {
             {/* <iframe src={resume + '#toolbar=0'} width="100%" height="100%" frameborder="0"></iframe> */}
             {/* <embed src={resume + '#toolbar=0&zoom=100'} type="application/pdf" width='100%' height='100%'></embed> */}
 
-            <iframe title="Developer Resume" src="https://drive.google.com/file/d/145erI4NIYh0HUE3PjCP-6yqPJc53oSR9/preview" width="100%" height="100%"></iframe>
+            <embed title="Developer Resume" src="https://drive.google.com/file/d/145erI4NIYh0HUE3PjCP-6yqPJc53oSR9/preview" width="100%" height="100%"></embed>
 
           </Wrapper>
         </Container>
 
 
         <Footer location='resume' />
-      </Appear>
+      </Main>
 
     </>
   )
@@ -65,15 +66,17 @@ const Container = styled.div`
   position: relative;
   z-index: 1;
   justify-content: center;
-
+  flex-grow: 1;
 `
 
-// const Wrapper = styled.div`
-//   height: 100%;
-//   width: 100%;
-// `
+const Main = styled(Appear)`
+  min-height: ${({ isLoading }) => (isLoading ? '100vh' : '10vh')};
+  height: ${({ isLoading }) => (isLoading ? '' : '10vh')};
+  display: flex;
+  flex-direction: column;
+`
 
-export const Wrapper = styled.div` 
+export const Wrapper = styled.div`
   z-index: 3;
   max-width: 1200px;
   width: 875px;
@@ -83,16 +86,16 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 80px;
 
+@media screen and(max - width: 900px) {
+  width: 100 %;
+  height: 819px;
+}
 
-  @media screen and (max-width: 900px) {
-    width: 100%;
-    height: 819px;
-  }
+@media screen and(max - width: 750px) {
+  width: 100 %;
 
-  @media screen and (max-width: 750px) {
-    width: 100%;
+}
 
-  }
-  
 `
