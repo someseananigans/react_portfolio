@@ -92,9 +92,20 @@ export const TopLine = styled.p`
 `
 
 export const PortH1 = styled.h1`
-  font-size: 48px;
+  /* font-size: 48px; */
   color: #f7f8fa;
   margin-bottom: 40px;
+
+  font-family: 'Archivo Black', sans-serif;
+    font-size: 63px;
+    line-height: 45px;
+    letter-spacing: -3px;
+    font-weight: 800;
+    
+    @media screen and (max-width: 900px) {
+    font-size: 50px;
+    line-height: 35px;
+  }
 
   @media screen and (max-width: 1200px) {
     margin-bottom: 30px;
@@ -159,7 +170,7 @@ export const PortIcon = styled.img`
   object-fit: contain;
   position: absolute;
   padding: 10px;
-  background-color: ${({ bgColor }) => (bgColor ? bgColor : 'white')};
+  background: ${({ bgColor }) => (bgColor ? bgColor : 'white')};
   
   @media screen and (max-width: 540px) {
     padding: 25px;
