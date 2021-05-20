@@ -1,6 +1,5 @@
 import React from 'react'
 import { PortContainer, PortH1, PortWrapper, PortCard, PortIcon, PortH2, Portp, Wrapper, Overlay, IconWrapper, TechIcon, PortLinkButton, DetailWrap, TopLine, AList, TipText } from './PortfolioElements'
-import image1 from '../../images/svg-1.svg'
 import { SiJavascript, SiHtml5, SiMongodb, SiReact, SiNodeDotJs, SiFirebase, SiGithub } from 'react-icons/si'
 import { TiCss3 } from 'react-icons/ti'
 import { HiDatabase, HiLink } from 'react-icons/hi'
@@ -17,7 +16,7 @@ const Portfolio = ({ p1, p2, p3 }) => {
         <Wrapper imgFirst={true}>
 
           <PortCard>
-            <PortIcon src={p1.image} bgColor={'#fff0f0'} />
+            <PortIcon src={p1.image} bgColor={'linear-gradient(21deg, #d1a6ff, #ffd5d5)'} />
             <Overlay>
               <PortH2>{p1.title}</PortH2>
               <PortLinkButton href={p1.deploy} target='_blank' aria-label="Bartender's Friend">
@@ -57,7 +56,7 @@ const Portfolio = ({ p1, p2, p3 }) => {
 
         <Wrapper imgFirst={true}>
           <PortCard>
-            <PortIcon src={p2.image} bgColor={'#2e94ff'} />
+            <PortIcon src={p2.image} bgColor={'linear-gradient(21deg, #2e94ff, #1fe6ff)'} />
             <Overlay>
               <PortH2>{p2.title}</PortH2>
               <PortLinkButton href={p2.deploy} target='_blank' aria-label='FreeMarket'>
@@ -114,7 +113,7 @@ const Portfolio = ({ p1, p2, p3 }) => {
         </Wrapper>
         <Wrapper imgFirst={true}>
           <PortCard>
-            <PortIcon src={image1} />
+            <PortIcon src={p3.image} bgColor={`linear-gradient(21deg, #e9ffc7, white)`} />
             <Overlay>
               <PortH2>{p3.title}</PortH2>
               <PortLinkButton href={p3.deploy} target='_blank' aria-label='FeedMe'>
