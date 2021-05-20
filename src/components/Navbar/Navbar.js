@@ -33,7 +33,7 @@ const Navbar = ({ toggleOpen, location }) => {
   }
 
   useEffect(() => {
-    if (location === 'resume') {
+    if (location === 'resume' || location === '404') {
       setScrollNav(true)
     }
     window.addEventListener('scroll', changeNav)
@@ -65,7 +65,7 @@ const Navbar = ({ toggleOpen, location }) => {
           </MobileIcon>
           <NavBtn location={location}>
             <NavMenu location={location}>
-              {location === 'main' ? (
+              {location === 'main' && (
                 <>
                   <NavItem>
                     <NavLink
@@ -108,17 +108,17 @@ const Navbar = ({ toggleOpen, location }) => {
                     >Contact</NavLink>
                   </NavItem>
                 </>
-              ) : (
+              )}
+              {location === 'resume' && (
                 <NavItem>
                   <NavHome to="/">Home</NavHome>
                 </NavItem>
               )}
             </NavMenu>
 
-            {location === 'main' ?
-              (<NavBtnLink to="/resume" >Resume</NavBtnLink>) :
-              (<ResBtnLink href={resume} download="Sean_Nguyen - Resume2021" >Download</ResBtnLink>)
-            }
+            {location === 'main' && (<NavBtnLink to="/resume" >Resume</NavBtnLink>)}
+            {location === 'resume' && (<ResBtnLink href={resume} download="Sean_Nguyen - Resume2021" >Download</ResBtnLink>)}
+            {location === '404' && (<NavBtnLink to="/" >Home</NavBtnLink>)}
 
           </NavBtn>
         </NavContainer>
