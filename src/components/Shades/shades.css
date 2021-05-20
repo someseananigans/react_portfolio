@@ -4,14 +4,35 @@
 
 :root {
   --dots: rgba(242, 242, 242, 0.6);
-  --frame: #000;
   --shine: rgba(242, 242, 242, 0);
   /* --shine: rgba(242, 242, 242, 0.35); */
-  --lens: #0b0c10;
+  /* --lens: #202020; */
+  --lens: url(#gradient2);
   --code-one: #66fcf1;
   --code-two: #45a29e;
   --code-three: #c5c6c7;
   --code-four: #f7f8fa;
+  --frame: url(#gradient);
+  --color-brand2: #232733;
+  --color-brand-secondary2: #111111;
+  --color-brand: white;
+  --color-brand-secondary: #1c1f29;
+}
+
+.gradient__brand-secondary {
+  stop-color: var(--color-brand-secondary);
+}
+
+.gradient__brand {
+  stop-color: var(--color-brand);
+}
+
+.gradient__brand-secondary2 {
+  stop-color: var(--color-brand-secondary2);
+}
+
+.gradient__brand2 {
+  stop-color: var(--color-brand2);
 }
 
 /* #0b0c10 '#1f2833', '#c5c6c7', '#45a29e', '', '#f7f8fa'  */
@@ -38,7 +59,8 @@
 
 svg:hover .code-block {
   /*animation-play-state: running;
-  */animation: read 1.75s linear;
+  */
+  animation: read 1.75s linear;
   -webkit-animation: read 1.75s linear;
   animation-iteration-count: infinite;
 }
