@@ -92,7 +92,7 @@ const Form = (colorScheme) => {
     }
     // set message and contact info to be an email sent to you
     else {
-      // sendEmail()
+      sendEmail()
       handleOpen(true)
       setTimeout(() => {
         setFormState({
