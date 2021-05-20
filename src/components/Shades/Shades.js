@@ -38,8 +38,18 @@ const Shades = () => {
           </clipPath>
         </defs>
         <g transform="matrix(1.34105 0 0 1.34105 -51 -1050)">
+
+          <linearGradient x1="0" y1="0" x2="100%" y2="100%" id="gradient">
+            <stop class="gradient__brand-secondary" offset="0" />
+            <stop class="gradient__brand" offset="100%" />
+          </linearGradient>
+          <linearGradient x1="0" y1="0" x2="100%" y2="100%" id="gradient2">
+            <stop class="gradient__brand-secondary2" offset="0" />
+            <stop class="gradient__brand2" offset="100%" />
+          </linearGradient>
+
           <path className="shades-frame" d="M77 855c-6 0-13 0-23 2l-14 3 2 15 7 2c3 5 1 10 2 18 3 28 12 34 26 35 8 1 23 3 33-1s19-10 25-18c6-9 6-18 10-26 3-5 8-4 10 0 3 8 4 17 10 26 6 8 15 14 24 18 11 4 26 2 34 1 14-1 23-7 26-35 1-8-2-13 2-18l7-2 2-15-15-3c-15-3-23-2-34-2h-13l-25 4c-8 2-15 7-23 6-8 0-15-5-23-6l-25-4H77z"></path>
-          <path className="lens" d="M85 860c-10 1-25 1-28 13-3 15-3 32 6 45 7 11 23 9 35 9 19-1 35-16 40-34 2-8 4-14 1-19-6-10-20-12-31-13l-23-1z" fill="#333"></path>
+          <path className="lens" d="M85 860c-10 1-25 1-28 13-3 15-3 32 6 45 7 11 23 9 35 9 19-1 35-16 40-34 2-8 4-14 1-19-6-10-20-12-31-13l-23-1z" fill="url(#gradient2)"></path>
           <path className="shades-dot" d="M56 864a4 2 0 01-4 2 4 2 0 01-4-2 4 2 0 014-1 4 2 0 014 1"></path>
           <path className="lens" d="M215 860c10 1 24 1 28 13 3 15 3 32-6 45-7 11-23 9-35 9-19-1-35-16-40-34-2-8-4-14-1-19 6-10 20-12 31-13l23-1z" fill="#333"></path>
           <path className="shades-dot" d="M244 864a4 2 0 004 2 4 2 0 004-2 4 2 0 00-4-1 4 2 0 00-4 1"></path>
