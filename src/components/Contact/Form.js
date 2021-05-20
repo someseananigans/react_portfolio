@@ -44,7 +44,7 @@ const Form = (colorScheme) => {
     setOpen(true)
     setTimeout(() => {
       setOpen(false)
-    }, 200000);
+    }, 2000);
   }
 
   const handleClose = () => {
