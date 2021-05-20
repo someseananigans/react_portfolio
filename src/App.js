@@ -4,7 +4,7 @@ import {
 } from 'react-router-dom'
 
 import './App.css'
-import { Home, Resume } from './pages'
+import { Home, Resume, Page404 } from './pages'
 
 
 const App = () => {
@@ -18,7 +18,7 @@ const App = () => {
         <Route exact path='/resume' >
           <Resume />
         </Route>
-        {/* enter 404 page */}
+        <Page404 />
       </Switch>
     </div>
   )
