@@ -1,6 +1,8 @@
 import Bartender from './images/Bartender.png'
 import FreeMarket from './images/FreeMarket.png'
 import codeThink from './images/svg-1.svg'
+import feedMe from './images/feedMe.svg'
+
 
 
 export const colorPalette = {
@@ -53,7 +55,7 @@ export const projects = {
     tools: ['JavaScript', 'CSS', 'HTML', 'Axios', 'MongoDB', 'ExpressJS', 'NodeJS', 'ReactJS', 'Passport JWT'],
     github: "https://github.com/someseananigans/reinstagram",
     deploy: "https://mighty-mesa-72754.herokuapp.com/",
-    image: ''
+    image: feedMe
   },
   p4: {
     title: 'Whine and Dine',
@@ -71,10 +73,13 @@ export const aboutMe = {
   // lightText: false,
   // lightTextDesc: false,
   topLine: 'About Me',
-  headline: 'Developer / Critical Thinker',
+  headline: <>
+    <p style={{ fontFamily: 'inherit' }}>Versatile</p>
+    <p style={{ fontFamily: 'inherit' }}>Critical Thinker</p>
+  </>,
   description: `I'm a team-oriented Full Stack Developer with a background in business development. Curious in nature, I am eager to test modern technologies and build solutions for complex problems. When I'm not fueling my passion for tech, you can find me exploring nature, playing volleyball, or trying unique foods.`,
-  d1: `I'm a team-oriented Full Stack Developer with a background in business development. `,
-  d2: `Curious in nature, I am eager to test modern technologies and build solutions for complex problems. `,
+  d1: `I'm a team-oriented Developer with a background in business development. `,
+  d2: `Curious at heart, I'm always eager to test modern technologies and build solutions for complex problems. Currently exploring cloud technologies and honing my skills.`,
   d3: `When I'm not fueling my passion for tech, you can find me exploring nature, playing volleyball, or trying unique foods.`,
   // buttonLabel: 'Get Started',
   imgStart: true,
@@ -91,8 +96,8 @@ export const skills = {
   lightText: false,
   lightTextDesc: false,
   topLine: 'My Skills',
-  headline: 'User Experience Development',
-  description: 'From user stories and wireframes to design and functionality, I aim to provide user friendly applications that solve customer software development needs. ',
+  headline: <><p style={{ fontFamily: 'inherit' }}>Full-Stack</p> <p style={{ fontFamily: 'inherit' }}>Software Developement</p></>,
+  description: `User Experience is key! From user stories and wireframes to design and functionality, I provide user friendly applications that solve customer software development needs. I'm most comfortable with MERN stack.`,
   // buttonLabel: 'Get Started',
   imgStart: true,
   img: codeThink,
