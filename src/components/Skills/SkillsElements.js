@@ -128,6 +128,10 @@ export const Heading = styled.h1`
     font-size: 50px;
     line-height: 35px;
   }
+  @media screen and (max-width: 440px) {
+    font-size: 40px;
+    line-height: 29px;
+  }
 `
 
 export const Subtitle = styled.div`

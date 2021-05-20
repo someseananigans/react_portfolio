@@ -63,6 +63,13 @@ const Container = styled.div`
   z-index: 1;
   justify-content: center;
   flex-grow: 1;
+
+  @media screen and (max-width: 900px) {
+  height: 1000px;
+  }
+  @media screen and (max-width: 600px) {
+    height: 800px;
+}
 `
 
 const Main = styled(Appear)`
@@ -84,14 +91,11 @@ export const Wrapper = styled.div`
   align-items: center;
   margin-top: 80px;
 
-@media screen and(max - width: 900px) {
-  width: 100 %;
+@media screen and (max-width: 900px) {
+  width: 100%;
   height: 819px;
 }
-
-@media screen and(max - width: 750px) {
-  width: 100 %;
-
+@media screen and (max-width: 600px) {
+  height: 600px;
 }
-
 `

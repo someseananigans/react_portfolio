@@ -350,9 +350,9 @@ const FormBox = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: 600px) {
+  /* @media screen and (max-width: 600px) {
     max-width: 100%;
-  }
+  } */
   @media screen and (max-width: 960px) {
     box-shadow: none;
   }

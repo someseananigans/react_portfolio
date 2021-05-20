@@ -153,6 +153,10 @@ const Column2 = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
   grid-area: col2;
+
+  @media screen and (max-width: 525px) {
+    padding: 0;
+  }
 `
 
 const TextWrapper = styled.div`
@@ -180,6 +184,11 @@ const Heading = styled.h1`
   font-weight: 800;
 
   color: ${({ color }) => (color[2])};
+  
+  @media screen and (max-width: 440px) {
+    font-size: 50px;
+    line-height: 35px;
+  }
 `
 
 const Spiel = styled.p`
