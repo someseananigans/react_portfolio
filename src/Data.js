@@ -78,7 +78,7 @@ export const aboutMe = {
     <p style={{ fontFamily: 'inherit' }}>Critical Thinker</p>
   </>,
   description: `I'm a team-oriented Full Stack Developer with a background in business development. Curious in nature, I am eager to test modern technologies and build solutions for complex problems. When I'm not fueling my passion for tech, you can find me exploring nature, playing volleyball, or trying unique foods.`,
-  d1: `I'm a team-oriented Developer with a background in business development. `,
+  d1: `I'm a team-oriented developer with a background in business development. `,
   d2: `Curious at heart, I'm always eager to test modern technologies and build solutions for complex problems. Currently exploring cloud technologies and honing my skills.`,
   d3: `When I'm not fueling my passion for tech, you can find me exploring nature, playing volleyball, or trying unique foods.`,
   // buttonLabel: 'Get Started',
