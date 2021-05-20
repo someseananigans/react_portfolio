@@ -171,9 +171,14 @@ const TextWrapper = styled.div`
 `
 
 const Heading = styled.h1`
-  margin-bottom: 10px;
-  font-size: 48px;
-  line-height: 1.1.%;
+  margin-bottom: 20px;
+
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 63px;
+  line-height: 45px;
+  letter-spacing: -3px;
+  font-weight: 800;
+
   color: ${({ color }) => (color[2])};
 `
 
