@@ -66,7 +66,7 @@ text-decoration: none;
   /* visibility: ${({ showTitle }) => (showTitle ? 'visible' : 'hidden')}; */
   /* opacity: ${({ showTitle }) => (showTitle ? '100%' : '0')}; */
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 825px) {
     visibility: hidden;
   }
   @media screen and (max-width: 768px) {
