@@ -50,6 +50,7 @@ export const InfoContainer = styled.div`
   /* background: ${({ lightBg }) => (lightBg ? '#f9f9f9' : '#010606')}; */
   background: linear-gradient(to bottom, white 50%, #98fff7);
   height: 860px;
+  min-height: 100vh;
 
   /* @media screen and (max-width: 768px) {
     padding: 100px 0;

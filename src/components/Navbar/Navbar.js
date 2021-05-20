@@ -74,7 +74,7 @@ const Navbar = ({ toggleOpen, location }) => {
                       duration={500}
                       spy={true}
                       // exact={true}
-                      offset={-80}
+                      offset={-40}
                     >About</NavLink>
                   </NavItem>
                   <NavItem>
@@ -84,7 +84,7 @@ const Navbar = ({ toggleOpen, location }) => {
                       duration={500}
                       spy={true}
                       // exact={true}
-                      offset={-80}
+                      offset={-40}
                     >Skills</NavLink>
                   </NavItem>
                   <NavItem>
@@ -94,7 +94,7 @@ const Navbar = ({ toggleOpen, location }) => {
                       duration={500}
                       spy={true}
                       // exact={true}
-                      offset={-80}
+                      offset={-40}
                     >Portfolio</NavLink>
                   </NavItem>
                   <NavItem>
@@ -104,7 +104,7 @@ const Navbar = ({ toggleOpen, location }) => {
                       duration={500}
                       spy={true}
                       // exact={true}
-                      offset={-80}
+                      offset={-40}
                     >Contact</NavLink>
                   </NavItem>
                 </>

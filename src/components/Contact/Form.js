@@ -263,6 +263,7 @@ const Dialogue = styled.div`
   display: flex;
     flex-direction: column;
     place-content: center;
+    position: relative;
 `
 
 const DialoguePrimary = styled.h2`
@@ -288,13 +289,11 @@ const CloseIcon = styled(FaTimes)`
 
 const Icon = styled.div`
   position: absolute;
-  /* top: 1.2rem;
-  right: 1.5rem; */
+  position: absolute;
+  left: 272px;
+  top: 11px;
   background: transparent;
   cursor: pointer;
-  ontline: none;
-  top: 43%;
-  left: 59.5%;
 `
 
 const FormWrapper = styled.form`

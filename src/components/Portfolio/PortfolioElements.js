@@ -8,10 +8,12 @@ export const PortContainer = styled.div`
   align-items: center;
   /* background:#23272a; */
   background: #0b0c10;
+  min-height: 100vh;
 
   @media screen and (max-width: 830px) {
     padding: 100px 0;
     height: 860px;
+    min-height: 100%;
   }
   @media screen and (max-width: 1000px) {
     padding: 100px 0;

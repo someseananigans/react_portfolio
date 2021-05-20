@@ -68,6 +68,7 @@ const ContactDisplay = styled.div`
   display: flex;
   align-items: center;
   background: linear-gradient(to bottom, white 50%, rgb(152, 255, 247));
+  min-height: 100vh;
   /* background: white; */
   /* background: #010606; */
   /* background: ${({ color }) => (color[0])}; */
