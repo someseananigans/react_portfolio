@@ -5,8 +5,6 @@ import styled from 'styled-components'
 import { Appear } from '../components/SpinnerLoad/SpinElements'
 // import resume from '../images/Sean_Nguyen_Dev2021.pdf'
 
-
-
 const Resume = () => {
 
   const [back, setBack] = useState(false)
@@ -26,14 +24,12 @@ const Resume = () => {
 
   return (
     <>
-
-
-
       <SpinnerLoad back={back} />
       <Main isLoading={isLoading}>
 
         <Navbar
-          location='resume' />
+          location='resume'
+        />
 
         <Container>
           <Wrapper>
@@ -45,7 +41,6 @@ const Resume = () => {
 
           </Wrapper>
         </Container>
-
 
         <Footer location='resume' />
       </Main>
