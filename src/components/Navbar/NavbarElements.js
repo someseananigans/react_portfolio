@@ -72,7 +72,7 @@ text-decoration: none;
   @media screen and (max-width: 768px) {
     visibility: visible;
   }
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 450px) {
     visibility: hidden;
   }
 `
