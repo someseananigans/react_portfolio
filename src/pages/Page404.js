@@ -58,7 +58,8 @@ export default Page404
 
 
 const Container = styled.div`
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

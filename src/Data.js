@@ -45,7 +45,7 @@ export const projects = {
     features: 'User Authentication, Live Search Bar, Product Posting, and Editable User Accounts',
     tools: ['JavaScript', 'CSS', 'HTML', 'Axios', 'MySQL', 'ExpressJS', 'NodeJS', 'Passport JWT'],
     github: "https://github.com/someseananigans/FreeMarket",
-    deploy: "https://mighty-coast-38363.herokuapp.com/",
+    deploy: "http://thefreemarket.herokuapp.com/",
     image: FreeMarket
   },
   p3: {
@@ -53,8 +53,8 @@ export const projects = {
     description: 'A MERN stack instagram clone with the emphasis on Food Feeds. Back-End algorithsms provide users with a variety of Feed options.',
     features: 'User Authentication, Image Uploading, Like/Comment/Follow Functionalities, Suggested Accounts, Diverse Feeds and Editable Profiles',
     tools: ['JavaScript', 'CSS', 'HTML', 'Axios', 'MongoDB', 'ExpressJS', 'NodeJS', 'ReactJS', 'Passport JWT'],
-    github: "https://github.com/someseananigans/reinstagram",
-    deploy: "https://mighty-mesa-72754.herokuapp.com/",
+    github: "https://github.com/someseananigans/feedMe",
+    deploy: "https://feedmepics.herokuapp.com/",
     image: feedMe
   },
   p4: {
