@@ -211,7 +211,7 @@ const Tagline = styled.p`
 `
 
 const TipText = styled.span`
-  visibility: hidden;
+  opacity: 0;
   background: #010606;
   /* background: #0f0f0f; */
   color: #f7f8fa;
@@ -226,6 +226,7 @@ const TipText = styled.span`
   margin-left: -65px;
   left: 50%;
   transition: all .2s ease-in-out;
+  top: 30px;
 `
 
 
@@ -240,10 +241,9 @@ const IconLink = styled.a`
   font-size: 28px;
   margin: 15px;
   transition: all .2s ease-in-out;
-  top: 30px;
 
   &:hover ${TipText} {
-    visibility: visible;
+    opacity: 1;
     top: 37px;
     /* left: -13px; */
 
