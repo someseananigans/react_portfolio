@@ -327,12 +327,12 @@ const FormBtn = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.2s ease-ease-in-out;
+  transition: all 0.2s ease-in-out;
+  margin-top: 5px;
 
   &:hover {
-    transition: all 0.2s ease-ease-in-out;
-      color: #1f2833;
-      border: 2px solid ;
+    color: #1f2833;
+    border: 2px solid #66fcf1;
 
     background: #66fcf1;
   }
