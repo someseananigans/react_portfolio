@@ -7,5 +7,5 @@ This is me! Find out a little more about who I am and what I can do. Feel free t
 [Portfolio](http://someseananigans.com/)
 
 ## Preview
-![alt screenshot](images/screenshot1.png) 
-![alt screenshot](images/screenshot2.png)
+![alt screenshot](src/images/screenshot1.png) 
+![alt screenshot](src/images/screenshot2.png)
