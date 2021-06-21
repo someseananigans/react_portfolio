@@ -37,7 +37,7 @@ const Resume = () => {
             {/* <iframe src={resume + '#toolbar=0'} width="100%" height="100%" frameborder="0"></iframe> */}
             {/* <embed src={resume + '#toolbar=0&zoom=100'} type="application/pdf" width='100%' height='100%'></embed> */}
 
-            <embed title="Developer Resume" src="https://drive.google.com/file/d/1479AL3lRBh26pmU3MELNUPlzxSRjIZi5/preview" width="100%" height="100%"></embed>
+            <embed title="Developer Resume" src="https://drive.google.com/file/d/1gCKMjXATa4QpD6KO3gguFIa4jQAiwm2g/preview" width="100%" height="100%"></embed>
 
           </Wrapper>
         </Container>
