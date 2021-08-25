@@ -4,12 +4,13 @@ import { SiJavascript, SiHtml5, SiMongodb, SiReact, SiNodeDotJs, SiFirebase, SiG
 import { TiCss3 } from 'react-icons/ti'
 import { HiDatabase, HiLink } from 'react-icons/hi'
 import { FaPassport } from 'react-icons/fa'
+import { font } from '../../Data'
 
 const Portfolio = ({ p1, p2, p3 }) => {
   return (
     <PortContainer id='portfolio'>
       <TopLine>My Portfolio</TopLine>
-      <PortH1>Experience</PortH1>
+      <PortH1 fontFam={font.main}>Experience</PortH1>
 
       <PortWrapper>
 

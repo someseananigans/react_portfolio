@@ -4,7 +4,7 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import TextField from '@material-ui/core/TextField';
 // import Button from '@material-ui/core/Button'
-import { colorPalette } from '../../Data';
+import { colorPalette, font } from '../../Data';
 import emailjs from 'emailjs-com'
 import { FaTimes } from 'react-icons/fa'
 
@@ -145,7 +145,7 @@ const Form = (colorScheme) => {
   const RenderMessage = () => {
     return (
       <Dialogue onClick={((event) => event.stopPropagation())} >
-        <DialoguePrimary>{dialogue.primary}</DialoguePrimary>
+        <DialoguePrimary fontFam={font.main}>{dialogue.primary}</DialoguePrimary>
         <DialogueSecondary>{dialogue.secondary}</DialogueSecondary>
         <Icon onClick={handleClose}>
           <CloseIcon />
@@ -160,7 +160,7 @@ const Form = (colorScheme) => {
     <>
       <FormBox color={colorScheme}>
         <FormWrapper onSubmit={handleSubmit} className='contactForm' noValidate autoComplete="off">
-          <Heading>Contact</Heading>
+          <Heading fontFam={font.main}>Contact</Heading>
           <InputField
             onChange={handleInputChange}
             error={name.error}
@@ -267,7 +267,7 @@ const Dialogue = styled.div`
 `
 
 const DialoguePrimary = styled.h2`
-  font-family: 'Archivo Black',sans-serif;
+  font-family: ${({ fontFam }) => (fontFam)};
   font-size: 27px;
   line-height: 25px;
   letter-spacing: -3px;
@@ -311,6 +311,7 @@ const InputField = styled(CssTextField)`
   width: 90%;
   margin-bottom: 5px !important;
 `
+
 
 const FormBtn = styled.button`
   border-radius: 10px;
@@ -359,7 +360,7 @@ const FormBox = styled.div`
 
 const Heading = styled.h1`
   color: #f7f8fa;
-  font-family: 'Archivo Black', sans-serif;
+  font-family: ${({ fontFam }) => (fontFam)};
   font-size: 50px;
   line-height: 45px;
   letter-spacing: -3px;

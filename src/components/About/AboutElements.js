@@ -71,11 +71,11 @@ export const Heading = styled.h1`
   /* font-weight: 600; */
   color: #f7f8fa;
 
-  font-family: 'Archivo Black', sans-serif;
-    font-size: 63px;
-    line-height: 45px;
-    letter-spacing: -3px;
-    font-weight: 800;
+  font-family: ${({ fontFam }) => (fontFam)};
+  font-size: 63px;
+  line-height: 45px;
+  letter-spacing: -3px;
+  font-weight: 800;
 
   @media screen and (max-width: 480px) {
     font-size: 59px;

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Shades } from '..'
 import { InfoContainer, InfoWrapper, InfoRow, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle, ImgWrapper } from './AboutElements'
+import { font } from '../../Data'
 
 
 const About = ({ id, lightText, lightBg, topLine, headline, description, buttonLabel, imgStart, img, alt, darkText, primary, dark, d1, d2, d3 }) => {
@@ -12,7 +13,7 @@ const About = ({ id, lightText, lightBg, topLine, headline, description, buttonL
             <Column1>
               <TextWrapper>
                 <TopLine>{topLine}</TopLine>
-                <Heading>{headline}</Heading>
+                <Heading fontFam={font.main}>{headline}</Heading>
                 {/* <Subtitle>{description}</Subtitle> */}
                 <Subtitle>
                   <p style={{ marginBottom: '10px' }}>{d1}{d2}</p>

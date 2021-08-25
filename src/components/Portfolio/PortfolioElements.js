@@ -98,7 +98,7 @@ export const PortH1 = styled.h1`
   color: #f7f8fa;
   margin-bottom: 40px;
 
-  font-family: 'Archivo Black', sans-serif;
+  font-family: ${({ fontFam }) => (fontFam)};
     font-size: 63px;
     line-height: 45px;
     letter-spacing: -3px;

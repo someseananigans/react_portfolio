@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { HeroContainer, HeroBg, VideoBg, ArrowRight, ArrowForward, HeroBtnWrapper, HeroContent, HeroH1, HeroP } from './HeroElements'
 import { Button } from '../ButtonElement'
+import { font } from '../../Data'
 
 
 const HeroSection = () => {
@@ -19,7 +20,7 @@ const HeroSection = () => {
           </VideoBg>
         </HeroBg>
         <HeroContent>
-          <HeroH1>Hi, I'm Sean</HeroH1>
+          <HeroH1 fontFam={font.sub}>Hi, I'm Sean</HeroH1>
           <HeroP>Full Stack Developer</HeroP>
           <HeroBtnWrapper>
             <Button

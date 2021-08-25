@@ -63,7 +63,7 @@ export const HeroH1 = styled.h1`
   color: #66fcf1;
   font-size: 48px;
   text-align: center;
-  font-family: 'Encode Sans Expanded', sans-serif;
+  font-family: ${({ fontFam }) => (fontFam)};
 
   @media screen and (max-width: 768px) {
     font-size: 40px;

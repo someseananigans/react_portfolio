@@ -3,7 +3,11 @@ import FreeMarket from './images/FreeMarket.png'
 import codeThink from './images/svg-1.svg'
 import feedMe from './images/feedMe.svg'
 
-
+export const font = {
+  main: `Archivo Black, sans-serif`,
+  regular: 'Montserrat, sans-serif',
+  sub: `Encode Sans Expanded, sans-serif`
+}
 
 export const colorPalette = {
   colorScheme2: [
