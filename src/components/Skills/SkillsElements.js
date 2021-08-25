@@ -119,7 +119,7 @@ export const Heading = styled.h1`
   /* font-size: 48px; */
   /* line-height: 1.1;
   font-weight: 600; */
-  font-family: 'Archivo Black', sans-serif;
+  font-family: ${({ fontFam }) => (fontFam)};
   font-size: 63px;
   line-height: 45px;
   letter-spacing: -3px;
