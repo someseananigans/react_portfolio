@@ -116,17 +116,14 @@ export const PortLinkButton = styled.a`
   display: flex;
   justify-content: center;
   /* align-items: center; */
+  transition: .5s ease-in-out;
   transition: 
-    transform 0.3s ease,
-    opacity 0.5s ease-in-out,
-    background 0.2s ease-in-out,
-    margin-top 0.2s ease-in-out;
+    background .2s ease-in-out,
+    color .2s ease-in-out;
   opacity: 0;
   transform: scale(0.2);
   margin-top: 700px;
   box-shadow: 0px 0px 5px 0px white;
-  transition-delay: 100ms;
-  transition-property: margin-top, opacity, transform;
 
   &:hover {
     background: ${({ primary }) => (primary ? '#fff' : '#66fcf1')};
