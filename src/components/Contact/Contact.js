@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 
-const Contact = ({ colorScheme }) => {
+const Contact = ({ colorScheme, font }) => {
   return (
     <>
       <ContactDisplay color={colorScheme} id='contact'>
@@ -11,7 +11,7 @@ const Contact = ({ colorScheme }) => {
           <ContactRow>
             <Column1>
               <TextWrapper>
-                <Heading color={colorScheme}>Shoot me a message!</Heading>
+                <Heading color={colorScheme} font={font.main}>Shoot me a message!</Heading>
                 <Spiel color={colorScheme}>From collaborative projects to sharing ideas</Spiel>
                 <Tagline color={colorScheme}>Let's connect!</Tagline>
                 <SocialIcons>
@@ -178,9 +178,9 @@ const TextWrapper = styled.div`
 const Heading = styled.h1`
   margin-bottom: 20px;
 
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 63px;
-  line-height: 45px;
+  font-family: ${({ font }) => (font.family)};
+  font-size: ${({ font }) => (font.fontSize)};
+  line-height: ${({ font }) => (font.lineHeight)};
   letter-spacing: -3px;
   font-weight: 800;
 

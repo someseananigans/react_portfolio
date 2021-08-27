@@ -145,7 +145,7 @@ const Form = (colorScheme) => {
   const RenderMessage = () => {
     return (
       <Dialogue onClick={((event) => event.stopPropagation())} >
-        <DialoguePrimary fontFam={font.main}>{dialogue.primary}</DialoguePrimary>
+        <DialoguePrimary font={font.main}>{dialogue.primary}</DialoguePrimary>
         <DialogueSecondary>{dialogue.secondary}</DialogueSecondary>
         <Icon onClick={handleClose}>
           <CloseIcon />
@@ -160,7 +160,7 @@ const Form = (colorScheme) => {
     <>
       <FormBox color={colorScheme}>
         <FormWrapper onSubmit={handleSubmit} className='contactForm' noValidate autoComplete="off">
-          <Heading fontFam={font.main}>Contact</Heading>
+          <Heading font={font.main}>Contact</Heading>
           <InputField
             onChange={handleInputChange}
             error={name.error}
@@ -267,7 +267,7 @@ const Dialogue = styled.div`
 `
 
 const DialoguePrimary = styled.h2`
-  font-family: ${({ fontFam }) => (fontFam)};
+  font-family: ${({ font }) => (font.family)};
   font-size: 27px;
   line-height: 25px;
   letter-spacing: -3px;
@@ -360,10 +360,10 @@ const FormBox = styled.div`
 
 const Heading = styled.h1`
   color: #f7f8fa;
-  font-family: ${({ fontFam }) => (fontFam)};
+  font-family: ${({ font }) => (font.family)};
   font-size: 50px;
   line-height: 45px;
   letter-spacing: -3px;
   font-weight: 800;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 `

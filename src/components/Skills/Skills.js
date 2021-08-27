@@ -8,10 +8,8 @@ import { HiDatabase } from 'react-icons/hi'
 // import { HiDatabase, HiLink } from 'react-icons/hi'
 import { FaPassport } from 'react-icons/fa'
 
-import { font } from '../../Data'
 
-
-const InfoSection = ({ id, lightText, lightBg, topLine, headline, description, buttonLabel, imgStart, img, alt, darkText, primary, dark }) => {
+const Skills = ({ id, lightText, lightBg, topLine, headline, description, buttonLabel, imgStart, img, alt, darkText, primary, dark, font }) => {
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
@@ -20,7 +18,7 @@ const InfoSection = ({ id, lightText, lightBg, topLine, headline, description, b
             <Column1>
               <TextWrapper>
                 <TopLine>{topLine}</TopLine>
-                <Heading lightText={lightText} fontFam={font.main}>{headline}</Heading>
+                <Heading lightText={lightText} font={font.main}>{headline}</Heading>
                 <Subtitle darkText={darkText}>{description}</Subtitle>
                 {/* <BtnWrap>
                   <Button to='home'
@@ -98,4 +96,4 @@ const InfoSection = ({ id, lightText, lightBg, topLine, headline, description, b
   )
 }
 
-export default InfoSection
+export default Skills

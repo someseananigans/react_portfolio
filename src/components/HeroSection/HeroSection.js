@@ -20,7 +20,7 @@ const HeroSection = () => {
           </VideoBg>
         </HeroBg>
         <HeroContent>
-          <HeroH1 fontFam={font.sub}>Hi, I'm Sean</HeroH1>
+          <HeroH1 font={font.main}>Hi, I'm Sean</HeroH1>
           <HeroP>Full Stack Developer</HeroP>
           <HeroBtnWrapper>
             <Button
