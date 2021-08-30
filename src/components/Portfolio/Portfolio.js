@@ -32,7 +32,7 @@ const Portfolio = ({ projects, font }) => {
                   </PortLinkButton>
                 }
 
-                <PortLinkButton onClick={console.log('test')}>View More</PortLinkButton>
+                <PortLinkButton size='full' onClick={console.log('test')}>View More</PortLinkButton>
 
               </Overlay>
             </PortCard>
@@ -52,6 +52,10 @@ const Portfolio = ({ projects, font }) => {
             <PortLinkButton onClick={console.log('test')}>View More</PortLinkButton>
           </Overlay>
         </PortCard> */}
+
+        <Modal>
+
+        </Modal>
 
 
 
