@@ -124,6 +124,7 @@ export const PortLinkButton = styled.a`
   transform: scale(0.2);
   margin-top: 700px;
   box-shadow: 0px 0px 5px 0px white;
+  min-width: ${({ size }) => (size === 'full' && '180px')};
 
   &:hover {
     background: ${({ primary }) => (primary ? '#fff' : '#66fcf1')};
