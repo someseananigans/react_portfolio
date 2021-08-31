@@ -199,7 +199,7 @@ export const PortCard = styled.div`
 
 
 export const CarouselWrapper = styled.div`
-  height: 495px;
+  height: 500px;
 `
 
 export const Description = styled.p`
@@ -213,19 +213,23 @@ export const Features = Description
 
 export const DetailsWrapper = styled.div`
   display: flex;
-  margin: 10px 25px 10px 25px;
+  margin: 10px 35px 0px 35px;
+`
+
+export const HorWrapper = styled.div`
+  display: flex;
 `
 
 export const IconWrapper = styled.div`
   display: flex;
-  margin-left: 35px;
 `
 
-export const Wrapper = styled.div`
+export const VertWrapper = styled.div`
   display: flex;
   flex-direction: column;
   min-width: 250px;
-  margin: 10px;
+  width: ${({ min }) => min && '590px'};
+  margin: ${({ margin }) => margin ? '10px 10px 10px 0px' : '10px 0px 10px 0px'};
 `
 
 export const Heading = styled.h3`
@@ -233,5 +237,38 @@ export const Heading = styled.h3`
 `
 
 
+export const TipText = styled.span`
+  opacity: 0;
+  /* background: #010606; */
+  /* background: #0f0f0f; */
+  color: black;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  font-size: 10px;
+  /* transition: all 0.2s ease-in-out; */
+  box-shadow: ${({ color }) => color !== ' white' && color !== ' #121212' ? `0px 0px 5px 0px ${color}` : '0px 0px 5px 0px gray'};
+  width: 75px;
+  left: -22px;
+  text-align-last: center;
+  transition: all .2s ease-in-out;
+  top: 30px;
+`
 
 
+export const Icon = styled.div`
+  font-size: ${({ size }) => size ? size : '30px'};
+  margin-top: ${({ top }) => top ? top : '0'};
+  margin-right: 10px;
+
+  &:hover ${TipText} {
+    opacity: 1;
+    top: ${({ topText }) => topText ? topText : '37px'};;
+  }
+
+  &:hover {
+    color: ${({ color }) => color !== ' white' && color !== ' #121212' ? color : 'gray'};
+    transform: scale(1.08);
+  }
+`
