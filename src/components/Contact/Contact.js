@@ -125,26 +125,26 @@ const ContactRow = styled.div`
     grid-template-areas: ${({ imgStart }) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
   }
 `
-const ContactColumn = styled.div`
-  margin-bottom: 15px;
-  padding-right: 15px;
-  padding-left: 15px;
-  flex: 1;
-  // column is 50% of the row (similar to [sm-6])
-  max-width: 50%;
-  flex-basis: 50%;
-  display: flex;
-  justify-content: center;
-  // at smaller screen, column takes up the whole like in the flex row
-  @media screen and (max-width: 960px) {
-    max-width: 100%;
-    flex-basis: 100%;
-    display: flex;
-    justify-content: center;
-    padding-right: 0;
-    padding-left: 0;
-}
-`
+// const ContactColumn = styled.div`
+//   margin-bottom: 15px;
+//   padding-right: 15px;
+//   padding-left: 15px;
+//   flex: 1;
+//   // column is 50% of the row (similar to [sm-6])
+//   max-width: 50%;
+//   flex-basis: 50%;
+//   display: flex;
+//   justify-content: center;
+//   // at smaller screen, column takes up the whole like in the flex row
+//   @media screen and (max-width: 960px) {
+//     max-width: 100%;
+//     flex-basis: 100%;
+//     display: flex;
+//     justify-content: center;
+//     padding-right: 0;
+//     padding-left: 0;
+// }
+// `
 const Column1 = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
