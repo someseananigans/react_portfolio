@@ -115,6 +115,8 @@ const Form = (colorScheme) => {
 
   const handleInputChange = ({ target }) => {
     switch (target.name) {
+      default:
+        break;
       case 'name':
         setFormState({
           ...formState, name: {
