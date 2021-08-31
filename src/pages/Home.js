@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Sidebar, HeroSection, About, Footer, Contact, Portfolio, Skills, SpinnerLoad } from '../components'
+import { Navbar, Sidebar, HeroSection, About, Contact, Portfolio, Skills, SpinnerLoad } from '../components'
 import { useState, useEffect } from 'react'
 import { aboutMe, colorPalette, projects, skills, font } from '../Data'
 import { Appear } from '../components/SpinnerLoad/SpinElements'
