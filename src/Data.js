@@ -58,6 +58,10 @@ export const projects = [
     github: "https://github.com/Smeza314/Cocktail-Nutrition/",
     deploy: "https://smeza314.github.io/Cocktail-Nutrition/",
     image: Bartender,
+    images: [
+      { image: 'https://imgur.com/lHMC9jq.png', caption: 'home' },
+      { image: 'https://imgur.com/GRXcPjW.png', caption: 'cocktail details' }
+    ],
     fit: ['contain', 'contain'],
     background: '#d1a6ff, #ffd5d5',
   },
@@ -69,6 +73,12 @@ export const projects = [
     github: "https://github.com/someseananigans/FreeMarket/",
     deploy: "http://thefreemarket.herokuapp.com/",
     image: FreeMarket,
+    images: [
+      { image: 'https://imgur.com/N26woS1.png', caption: 'home' },
+      { image: 'https://imgur.com/8Uw6oTF.png', caption: 'search' },
+      { image: 'https://imgur.com/ya4Z7VK.png', caption: 'categories' },
+      { image: 'https://imgur.com/aOnPFfI.png', caption: 'new listing' },
+    ],
     fit: ['contain', 'contain'],
     background: '#2e94ff, #1fe6ff',
   },
@@ -80,6 +90,12 @@ export const projects = [
     github: "https://github.com/someseananigans/feedMe/",
     deploy: "https://feedmepics.herokuapp.com/",
     image: feedMe,
+    images: [
+      { image: 'https://imgur.com/h2cs1xu.png', caption: 'home' },
+      { image: 'https://imgur.com/ZxQjZbH.png', caption: 'registration' },
+      { image: 'https://imgur.com/SW3U2EG.png', caption: 'profile' },
+      { image: 'https://imgur.com/JI9GEjE.png', caption: 'comments' }
+    ],
     fit: ['contain', 'contain'],
     background: '#ffd7c7, white',
   },
@@ -91,6 +107,10 @@ export const projects = [
     github: "https://github.com/someseananigans/gitmeocto",
     deploy: "https://main.d1rawf7z427x2j.amplifyapp.com/",
     image: gitmeocto,
+    images: [
+      { image: 'https://imgur.com/orv0sYI.png', caption: 'home' },
+      { image: 'https://imgur.com/CCbNRY5.png', caption: 'user summary' }
+    ],
     fit: ['cover', 'contain'],
     background: '#121212, #121212',
   },
@@ -102,6 +122,10 @@ export const projects = [
     github: "https://github.com/someseananigans/currency-converter",
     deploy: "https://main.d1x6dmj04lq12d.amplifyapp.com/",
     image: currency,
+    images: [
+      { image: 'https://imgur.com/CDK36rV.png', caption: 'home' },
+      { image: 'https://imgur.com/z4p3iwM.png', caption: 'exchange' }
+    ],
     fit: ['contain', 'contain'],
     background: '#ffffff, #9ffcbb',
   },
@@ -113,6 +137,12 @@ export const projects = [
     github: "https://github.com/someseananigans/Inertia-Discord-Bot",
     deploy: "",
     image: inertia,
+    images: [
+      { image: 'https://imgur.com/6EFteAX.png', caption: 'commands' },
+      { image: 'https://imgur.com/cX7qn3K.png', caption: 'watchlist' },
+      { image: 'https://imgur.com/CQZq4hH.png', caption: 'sales cronjob' },
+      { image: 'https://imgur.com/j3xPFXX.png', caption: 'assets' },
+    ],
     fit: ['cover', 'cover'],
     background: '#e1fff7,#1a0029',
   },
