@@ -198,5 +198,40 @@ export const PortCard = styled.div`
 
 
 
+export const CarouselWrapper = styled.div`
+  height: 495px;
+`
+
+export const Description = styled.p`
+  /* margin: 35px; */
+  font-size: 17px;
+  font-weight: 500;
+`
+
+
+export const Features = Description
+
+export const DetailsWrapper = styled.div`
+  display: flex;
+  margin: 10px 25px 10px 25px;
+`
+
+export const IconWrapper = styled.div`
+  display: flex;
+  margin-left: 35px;
+`
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+  margin: 10px;
+`
+
+export const Heading = styled.h3`
+  margin-bottom: 4px;
+`
+
+
 
 
