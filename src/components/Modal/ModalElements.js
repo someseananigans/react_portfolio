@@ -52,7 +52,7 @@ const Modal = styled.div`
     .box-content {
       /* padding: 24px; */
       width: 100%;
-      height: 700px;
+      height: 720px;
     }
     .box-header {
       height: 48px;
