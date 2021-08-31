@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { font } from "../../Data"
 
 const Modal = styled.div`
   position: fixed;
@@ -22,6 +23,7 @@ const Modal = styled.div`
         return "480px";
     }
   }};
+  max-width: 900px;
   margin: 40px auto;
   &.fade-in {
     opacity: 1;
@@ -50,7 +52,7 @@ const Modal = styled.div`
     .box-content {
       /* padding: 24px; */
       width: 100%;
-      height: 800px;
+      height: 700px;
     }
     .box-header {
       height: 48px;
@@ -58,14 +60,16 @@ const Modal = styled.div`
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin: 20px 0 -20px 0px;
       /* border-bottom: 1px solid #c7c7c7; */
       .box-title {
-        font-size: 30px;
-        font-weight: 400;
+        font-family: ${font.main.family};
+        font-size: 40px;
+        font-weight: 800;
         margin: 0 0 0 0;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: -35px;
+        /* margin-bottom: -38px; */
       }
       .x-close {
         font-size: 35px;
@@ -74,6 +78,7 @@ const Modal = styled.div`
         text-shadow: none;
         color: black;
         cursor: pointer;
+        
         &:hover {
           opacity: 0.5;
         }
