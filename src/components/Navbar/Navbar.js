@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import {
   Nav, NavContainer, NavLogo,
   MobileIcon, NavMenu, NavItem, NavLink, NavHome,
-  NavBtn, NavBtnLink, ResBtnLink, NavTitle, NavDescription, LogoWrapper, ShowWrapper,
+  NavBtn, NavBtnLink, ResBtnLink, NavTitle, NavDescription, LogoWrapper, ShowWrapper, SideNavScroll, NavIcon, NavSubtitle, NavSubWrapper,
 } from './NavbarElements'
 import { FaBars } from 'react-icons/fa'
 import { animateScroll as scroll } from 'react-scroll'
@@ -68,7 +68,7 @@ const Navbar = ({ toggleOpen, location }) => {
             <NavMenu location={location}>
               {location === 'main' && (
                 <>
-                  <NavItem>
+                  {/* <NavItem>
                     <NavLink
                       to="about"
                       smooth={true}
@@ -107,7 +107,7 @@ const Navbar = ({ toggleOpen, location }) => {
                       // exact={true}
                       offset={-40}
                     >Contact</NavLink>
-                  </NavItem>
+                  </NavItem> */}
                 </>
               )}
               {location === 'resume' && (
@@ -122,8 +122,76 @@ const Navbar = ({ toggleOpen, location }) => {
             {location === '404' && (<NavBtnLink to="/" >Home</NavBtnLink>)}
 
           </NavBtn>
+
         </NavContainer>
       </Nav>
+
+      {location === 'main' && (
+        <SideNavScroll>
+          <NavItem>
+            <NavLink
+              to="about"
+              smooth={true}
+              duration={500}
+              spy={true}
+              // exact={true}
+              offset={-40}
+            >
+              <NavIcon></NavIcon>
+              <NavSubWrapper>
+                <NavSubtitle>About</NavSubtitle>
+              </NavSubWrapper>
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink
+              to="discover"
+              smooth={true}
+              duration={500}
+              spy={true}
+              // exact={true}
+              offset={-40}
+            >
+              <NavIcon></NavIcon>
+              <NavSubWrapper>
+                <NavSubtitle>Skills</NavSubtitle>
+              </NavSubWrapper>
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink
+              to="portfolio"
+              smooth={true}
+              duration={500}
+              spy={true}
+              // exact={true}
+              offset={-40}
+            >
+              <NavIcon></NavIcon>
+              <NavSubWrapper>
+                <NavSubtitle>Portfolio</NavSubtitle>
+              </NavSubWrapper>
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink
+              to="contact"
+              smooth={true}
+              duration={500}
+              spy={true}
+              // exact={true}
+              offset={-40}
+            >
+              <NavIcon></NavIcon>
+              <NavSubWrapper>
+                <NavSubtitle>Contact</NavSubtitle>
+              </NavSubWrapper>
+            </NavLink>
+          </NavItem>
+        </SideNavScroll>
+      )}
+
+
     </>
   )
 }
