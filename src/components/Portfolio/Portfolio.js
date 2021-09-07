@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { PortContainer, PortH1, PortWrapper, PortCard, PortIcon, PortH2, Overlay, PortLinkButton, TopLine, Description, CarouselWrapper, Features, DetailsWrapper, Heading, VertWrapper, IconWrapper, Icon, TipText, HorWrapper } from './PortfolioElements'
+import { PortContainer, PortH1, PortWrapper, PortCard, PortIcon, PortH2, Overlay, PortLinkButton, TopLine, Description, CarouselWrapper, Features, DetailsWrapper, Heading, VertWrapper, IconWrapper, Icon, TipText, Next, Fixed, Prev, HorWrapper, Selection } from './PortfolioElements'
 import { SiJavascript, SiHtml5, SiMongodb, SiReact, SiNodeDotJs, SiFirebase, SiGithub, SiDiscord, SiReplDotIt, SiStyledComponents } from 'react-icons/si'
 import { TiCss3 } from 'react-icons/ti'
 import { HiDatabase, HiLink } from 'react-icons/hi'
@@ -16,6 +16,10 @@ const Portfolio = ({ projects, font }) => {
 
   const toggleModal = (title) => {
     setModalOpen(!isModalOpen)
+    setFocus(title)
+  }
+  const changeModal = (title) => {
+    setModalOpen(true)
     setFocus(title)
   }
 
@@ -60,7 +64,7 @@ const Portfolio = ({ projects, font }) => {
       <PortH1 font={font.main}>Experience</PortH1>
 
       <PortWrapper>
-        {projects.map(project => {
+        {projects.map((project, key) => {
           return (
 
             <PortCard PortCard key={project.title}>
@@ -87,6 +91,13 @@ const Portfolio = ({ projects, font }) => {
                     onClose={toggleModal}
                     title={project.title}
                   >
+                    <Fixed>
+
+                      <Selection>
+                        <Prev color={project.background.slice(8)} onClick={() => changeModal(projects[key === 0 ? projects.length - 1 : key + 1].title)}>❮</Prev>
+                        <Next color={project.background.slice(8)} onClick={() => changeModal(projects[key < projects.length - 1 ? key + 1 : 0].title)}>❯</Next>
+                      </Selection>
+                    </Fixed>
                     <CarouselWrapper>
                       <Carousel
                         data={project.images}
@@ -140,10 +151,14 @@ const Portfolio = ({ projects, font }) => {
                       </VertWrapper>
                       <VertWrapper min={'true'}>
                         <Heading>Features</Heading>
-                        <Features>{project.features}</Features>
+                        {project.features.map(feature => {
+                          return (
+                            <p>- {feature}</p>
+                          )
+                        })}
+                        {/* <Features>{project.features}</Features> */}
                       </VertWrapper>
                     </DetailsWrapper>
-
 
                   </Modal>
                 )}

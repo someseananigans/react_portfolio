@@ -83,7 +83,7 @@ export const PortH1 = styled.h1`
 
 export const Overlay = styled.aside`
   position: absolute;
-  z-index: 999;
+  z-index: 9;
   width: 100%;
   height: 100%;
   background: #000000c0;
@@ -261,6 +261,7 @@ export const Icon = styled.div`
   font-size: ${({ size }) => size ? size : '30px'};
   margin-top: ${({ top }) => top ? top : '0'};
   margin-right: 10px;
+  transition: all .2s ease-in-out;
 
   &:hover ${TipText} {
     opacity: 1;
@@ -271,4 +272,45 @@ export const Icon = styled.div`
     color: ${({ color }) => color !== ' white' && color !== ' #121212' ? color : 'gray'};
     transform: scale(1.08);
   }
+`
+
+export const Prev = styled.div`
+  cursor: pointer;  
+  height: 45px;
+  width: 45px;
+      padding: 9px 12px 12px 16px;
+      border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  &:hover {
+    background-color: ${({ color }) => color !== ' white' && color !== ' #121212' ? color : 'gray'};
+  }
+`
+export const Next = styled.div`
+  cursor: pointer;  
+  height: 45px;
+  width: 45px;
+      padding: 9px 12px 12px 16px;
+      border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  
+  &:hover {
+    background-color: ${({ color }) => color !== ' white' && color !== ' #12121283' ? color + '83' : '#80808094'};
+  }
+`
+export const Selection = styled.div`
+  position: absolute;
+  top: -65px;
+  display: flex;
+  place-content: space-between;
+  width: 900px;
+  padding: 0 50px 0 50px;
+`
+export const Fixed = styled.div`
+  position: relative;
 `
