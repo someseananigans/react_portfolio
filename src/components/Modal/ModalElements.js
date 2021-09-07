@@ -24,7 +24,9 @@ const Modal = styled.div`
     }
   }};
   max-width: 900px;
-  margin: 40px auto;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: scroll;
   &.fade-in {
     opacity: 1;
     transition: opacity linear 0.15s;
