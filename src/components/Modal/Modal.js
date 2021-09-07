@@ -76,9 +76,9 @@ class Modal extends Component {
         <div className="box-dialog">
           <div className="box-header">
             <h4 className="box-title">{this.props.title}</h4>
-            <button onClick={this.handleClick} className="close">
+            {/* <button onClick={this.handleClick} className="close">
               ×
-            </button>
+            </button> */}
           </div>
           <div className="box-content">{this.props.children}</div>
           {/* <div className="box-footer">
