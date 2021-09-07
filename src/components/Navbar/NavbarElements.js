@@ -120,23 +120,73 @@ export const NavMenu = styled.ul`
   }
 `
 export const NavItem = styled.li`
-  height: 80px;
+  /* height: 80px; */
   /* width: 105px; */
   display: flex;
   justify-content: center;
 `
+
+export const NavIcon = styled.div`
+  width: 10px;
+  height: 20px;
+  background: #424242;
+  border-radius: 2px;
+  transition: .3s ease-in-out;
+  z-index: 9;
+`
+
+export const NavSubtitle = styled.h3`
+  color: white;
+  align-self: center;
+  text-align: end;
+`
+
+export const NavSubWrapper = styled.div`
+  height: 40px;
+  background: #0b0c10;
+  transition: .3s ease-in-out;
+  right: 17px;
+  position: absolute;
+  display: flex;
+  opacity: 0;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px white;
+`
+
 export const NavLink = styled(LinkS)`
   color: #f7f8fa;
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0 1rem;
-  height: 100%;
+  padding: 0px 16px;
+  height: 60px;
   cursor: pointer;
+  position: relative;
   
 
   &.active { 
-    border-bottom: 4px solid #00dbcd
+    /* border-bottom: 4px solid #00dbcd */
+    background: transparent;
+  }
+  
+  &.active ${NavIcon} { 
+    /* border-bottom: 4px solid #00dbcd */
+    background: #a7fff9;
+    height: 40px;
+  }
+
+  &:hover ${NavSubWrapper} {
+    opacity: 1;
+    right: 40px;
+  }
+
+  &:hover {
+    
+  }
+
+  &:hover ${NavIcon} {
+    height: 40px;
   }
 `
 
@@ -205,4 +255,17 @@ export const NavHome = styled(LinkR)`
   height: 100%;
   cursor: pointer;
 
+`
+
+export const SideNavScroll = styled.div`
+  position: fixed;
+  z-index: 999;
+  color: white;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 100vh;
+  width: 10px;
+  justify-content: center;
 `
