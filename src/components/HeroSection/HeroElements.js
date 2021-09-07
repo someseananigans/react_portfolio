@@ -61,9 +61,9 @@ export const HeroContent = styled.div`
 
 export const HeroH1 = styled.h1`
   color: #66fcf1;
-  font-size: 48px;
+  font-size: ${({ font }) => (font.fontSize)};
   text-align: center;
-  font-family: 'Encode Sans Expanded', sans-serif;
+  font-family: ${({ font }) => (font.family)};
 
   @media screen and (max-width: 768px) {
     font-size: 40px;
@@ -75,9 +75,9 @@ export const HeroH1 = styled.h1`
 `
 
 export const HeroP = styled.p` 
-  margin-top: 24px;
+  margin-top: 12px;
   color: #fff;
-  font-size: 24px;
+  font-size: 26px;
   text-align: center;
   max-width: 600px;
 

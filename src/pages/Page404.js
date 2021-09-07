@@ -15,6 +15,8 @@ const Page404 = () => {
   const togglePrimary = () => {
 
     switch (primary) {
+      default:
+        break;
       case images[0]:
         setPrimary(images[1])
         break;

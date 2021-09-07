@@ -119,9 +119,9 @@ export const Heading = styled.h1`
   /* font-size: 48px; */
   /* line-height: 1.1;
   font-weight: 600; */
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 63px;
-  line-height: 45px;
+  font-family: ${({ font }) => (font.family)};
+  font-size: ${({ font }) => (font.fontSize)};
+  line-height: ${({ font }) => (font.lineHeight)};
   letter-spacing: -3px;
   font-weight: 800;
 
@@ -138,7 +138,7 @@ export const Heading = styled.h1`
 export const Subtitle = styled.div`
   max-width: 480px;
   margin-bottom: 35px;
-  font-size: 1rem;
+  font-size: 18px;
   line-height: 24px;
   color: ${({ darkText }) => (darkText ? '#010606' : '#fff')};
 `

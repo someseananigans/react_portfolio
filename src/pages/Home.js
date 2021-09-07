@@ -1,7 +1,7 @@
 import React from 'react'
-import { Navbar, Sidebar, HeroSection, About, Footer, Contact, Portfolio, Skills, SpinnerLoad } from '../components'
+import { Navbar, Sidebar, HeroSection, About, Contact, Portfolio, Skills, SpinnerLoad } from '../components'
 import { useState, useEffect } from 'react'
-import { aboutMe, colorPalette, projects, skills } from '../Data'
+import { aboutMe, colorPalette, projects, skills, font } from '../Data'
 import { Appear } from '../components/SpinnerLoad/SpinElements'
 
 const Home = () => {
@@ -38,10 +38,10 @@ const Home = () => {
           isOpen={isOpen}
           toggleOpen={toggleOpen} />
         <HeroSection />
-        <About {...aboutMe} />
-        <Skills {...skills} />
-        <Portfolio {...projects} />
-        <Contact {...colorPalette} />
+        <About {...aboutMe} font={font} />
+        <Skills {...skills} font={font} />
+        <Portfolio projects={projects} font={font} />
+        <Contact {...colorPalette} font={font} />
         {/* <Footer /> */}
       </Appear>
 

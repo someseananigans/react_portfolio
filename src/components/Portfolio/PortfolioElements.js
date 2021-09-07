@@ -29,14 +29,14 @@ export const PortWrapper = styled.div`
   width: 1100px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
 
   @media screen and (max-width: 1200px) {
     width: 100%;
   }
   @media screen and (max-width: 1000px) {
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
   }
   @media screen and (max-width: 830px) {
     place-content: center;
@@ -48,40 +48,7 @@ export const PortWrapper = styled.div`
 `
 
 
-export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: ${({ imgFirst }) => (imgFirst ? 'column' : 'column-reverse')};
-  align-items: center;
-  height: 100%;
-  width: 300px;
-  place-content: ${({ imgFirst }) => (imgFirst ? '' : 'flex-end')};
 
-  @media screen and (max-width: 1000px) {
-    justify-content: center;
-    margin: 8px auto;
-    flex-direction: row;
-    height: 210px;
-    width: 100%;
-  }
-  @media screen and (max-width: 830px) {
-    max-width: 210px;
-    height: 200px;
-    margin: 20px 15px;
-    margin-bottom: 30px;
-    flex-direction: ${({ imgFirst }) => (imgFirst ? 'row' : 'row-reverse')};
-    justify-content: center;
-  }
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    margin: 5px;
-    height: 220px;
-  }
-  @media screen and (max-width: 540px) {
-    max-width: 100%;
-    padding: 5px;
-    height: 180px;
-  }
-`
 
 export const TopLine = styled.p`
   color: #66fcf1;
@@ -98,13 +65,13 @@ export const PortH1 = styled.h1`
   color: #f7f8fa;
   margin-bottom: 40px;
 
-  font-family: 'Archivo Black', sans-serif;
-    font-size: 63px;
-    line-height: 45px;
-    letter-spacing: -3px;
-    font-weight: 800;
+  font-family: ${({ font }) => (font.family)};
+  font-size: ${({ font }) => (font.fontSize)};
+  line-height: ${({ font }) => (font.lineHeight)};
+  letter-spacing: -3px;
+  font-weight: 800;
     
-    @media screen and (max-width: 900px) {
+  @media screen and (max-width: 900px) {
     font-size: 50px;
     line-height: 35px;
   }
@@ -116,18 +83,19 @@ export const PortH1 = styled.h1`
 
 export const Overlay = styled.aside`
   position: absolute;
-  z-index: 999;
+  z-index: 9;
   width: 100%;
   height: 100%;
-  background: #0000009e;
+  background: #000000c0;
   left: 0;
   transition: 0.3s ease-in-out;
   opacity: 0;
   top: -100%;
+  padding: 10px;
 `
 
 export const PortH2 = styled.h2`
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   margin-bottom: 10px;
   color: #f7f8fa;
   text-align: center;
@@ -135,6 +103,7 @@ export const PortH2 = styled.h2`
 `
 export const PortLinkButton = styled.a`
   margin: 10px;
+  flex: 1;
   border-radius: 5px;
   background: #010606;
   white-space: nowrap;
@@ -147,17 +116,15 @@ export const PortLinkButton = styled.a`
   display: flex;
   justify-content: center;
   /* align-items: center; */
+  transition: .5s ease-in-out;
   transition: 
-    transform 0.3s ease,
-    opacity 0.5s ease-in-out,
-    background 0.2s ease-in-out,
-    margin-top 0.2s ease-in-out;
+    background .2s ease-in-out,
+    color .2s ease-in-out;
   opacity: 0;
   transform: scale(0.2);
   margin-top: 700px;
   box-shadow: 0px 0px 5px 0px white;
-  transition-delay: 100ms;
-  transition-property: margin-top, opacity, transform;
+  min-width: ${({ size }) => (size === 'full' && '180px')};
 
   &:hover {
     background: ${({ primary }) => (primary ? '#fff' : '#66fcf1')};
@@ -169,57 +136,38 @@ export const PortLinkButton = styled.a`
 export const PortIcon = styled.img`
   height: 100%;
   width: 100%;
-  object-fit: contain;
+  object-fit: ${({ fit }) => fit[0]};
   position: absolute;
-  padding: 10px;
+  padding: ${({ fit }) => fit[0] === 'cover' ? '0px' : '10px'};
   background: ${({ bgColor }) => (bgColor ? bgColor : 'white')};
-  
+
   @media screen and (max-width: 540px) {
-    padding: 25px;
+    /* padding: 25px; */
+    object-fit: ${({ fit }) => fit[1]};
   }
 `
 
-export const DetailWrap = styled.div`
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-  @media screen and (max-width: 1000px) {
-    width: 444px;
-    margin-left: 20px;
-  }
-  @media screen and (max-width: 830px) {
-    display: none;
-  }
-`
 
-export const Portp = styled.p`
-  font-size: 1rem;
-  color: #f7f8fa;
-  margin-bottom: 5px;
-`
 
-export const AList = styled.ul`
-`
 
 export const PortCard = styled.div`
+  box-shadow: 0px 0px 5px 0px white;
   display: flex;
   overflow: hidden;
   align-items: center;
-  margin: 10px 0;
-  border-radius: 10px;
-  height: 260px;
-  width: 260px;
+  /* margin: 10px 0; */
+  /* border-radius: 10px; */
+  height: 300px;
+  width: 300px;
   transition: all 0.2s ease-in-out;
   position: relative;
 
-  &:hover {
-    transform: scale(1.02);
+    &:hover {
+    /* transform: scale(1.02); */
     transition: all 0.2s ease-in-out;
     cursor: pointer;
   }
-  &:hover ${Overlay} {
+    &:hover ${Overlay} {
     opacity: 100%;
     top: 0;
     display: flex;
@@ -227,78 +175,142 @@ export const PortCard = styled.div`
     align-content: center;
     flex-wrap: wrap;
   }
-  &:hover ${PortLinkButton} {
+    &:hover ${PortLinkButton} {
     opacity: 100%;
     transform: scale(1.0);
     margin-top: 10px;
   }
 
-  @media screen and (max-width: 1000px) {
-    width: 210px;
-    height: 210px;
-  }
-  @media screen and (max-width: 830px) {
-    width: 200px;
-    height: 200px;
-  }
-  @media screen and (max-width: 540px) {
-    width: 100%;
-    margin: 5px;
-    height: 180px;
-  }
+@media screen and (max-width: 1000px) {
+  width: 260px;
+  height: 260px;
+}
+@media screen and (max-width: 830px) {
+  /* width: 200px;
+  height: 200px; */
+}
+@media screen and (max-width: 540px) {
+  width: 100%;
+  height: 180px;
+  margin: 5px;
+}
+`
+
+
+
+export const CarouselWrapper = styled.div`
+  height: 500px;
+`
+
+export const Description = styled.p`
+  /* margin: 35px; */
+  font-size: 17px;
+  font-weight: 500;
+`
+
+
+export const Features = Description
+
+export const DetailsWrapper = styled.div`
+  display: flex;
+  margin: 10px 35px 0px 35px;
+`
+
+export const HorWrapper = styled.div`
+  display: flex;
 `
 
 export const IconWrapper = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 240px;
-
-  @media screen and (max-width: 1000px) {
-    width: 100% !important;
-  }
 `
 
+export const VertWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+  width: ${({ min }) => min && '590px'};
+  margin: ${({ margin }) => margin ? '10px 10px 10px 0px' : '10px 0px 10px 0px'};
+`
+
+export const Heading = styled.h3`
+  margin-bottom: 4px;
+`
+
+
 export const TipText = styled.span`
-  visibility: hidden;
-  background: #010606;
+  opacity: 0;
+  /* background: #010606; */
   /* background: #0f0f0f; */
-  color: #f7f8fa;
+  color: black;
   border-radius: 6px;
   padding: 5px;
   position: absolute;
   z-index: 1;
   font-size: 10px;
   /* transition: all 0.2s ease-in-out; */
-  box-shadow: 0px 0px 5px 0px #66fcf1;
+  box-shadow: ${({ color }) => color !== ' white' && color !== ' #121212' ? `0px 0px 5px 0px ${color}` : '0px 0px 5px 0px gray'};
+  width: 75px;
+  left: -22px;
+  text-align-last: center;
+  transition: all .2s ease-in-out;
+  top: 30px;
 `
 
-export const TechIcon = styled.div`
-  color: white;
-  font-size: 19px;
-  display: flex;
-  width: 39px;
-  height: 39px;
-  margin: 5px;
-  align-items: center;
-  justify-content: center;
-  background-color: #010606;
-  border-radius: 50%;
-  box-shadow: 0px 0px 5px 0px white;
-  transition: all 0.2s ease-in-out;
-  position: relative;
 
-  &:hover {
-    background-color: #66fcf1;
-    cursor: pointer;
-    border-radius: 5px;
-    color: #010606;
-  }
+export const Icon = styled.div`
+  font-size: ${({ size }) => size ? size : '30px'};
+  margin-top: ${({ top }) => top ? top : '0'};
+  margin-right: 10px;
+  transition: all .2s ease-in-out;
 
   &:hover ${TipText} {
-    visibility: visible;
-    top: 42px;
+    opacity: 1;
+    top: ${({ topText }) => topText ? topText : '37px'};;
+  }
 
+  &:hover {
+    color: ${({ color }) => color !== ' white' && color !== ' #121212' ? color : 'gray'};
+    transform: scale(1.08);
   }
 `
 
+export const Prev = styled.div`
+  cursor: pointer;  
+  height: 45px;
+  width: 45px;
+      padding: 9px 12px 12px 16px;
+      border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  &:hover {
+    background-color: ${({ color }) => color !== ' white' && color !== ' #121212' ? color : 'gray'};
+  }
+`
+export const Next = styled.div`
+  cursor: pointer;  
+  height: 45px;
+  width: 45px;
+      padding: 9px 12px 12px 16px;
+      border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  
+  &:hover {
+    background-color: ${({ color }) => color !== ' white' && color !== ' #12121283' ? color + '83' : '#80808094'};
+  }
+`
+export const Selection = styled.div`
+  position: absolute;
+  top: -65px;
+  display: flex;
+  place-content: space-between;
+  width: 900px;
+  padding: 0 50px 0 50px;
+`
+export const Fixed = styled.div`
+  position: relative;
+`

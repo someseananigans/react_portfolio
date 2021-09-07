@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { HeroContainer, HeroBg, VideoBg, ArrowRight, ArrowForward, HeroBtnWrapper, HeroContent, HeroH1, HeroP } from './HeroElements'
 import { Button } from '../ButtonElement'
+import { font } from '../../Data'
 
 
 const HeroSection = () => {
@@ -19,7 +20,7 @@ const HeroSection = () => {
           </VideoBg>
         </HeroBg>
         <HeroContent>
-          <HeroH1>Hi, I'm Sean</HeroH1>
+          <HeroH1 font={font.main}>Hi, I'm Sean</HeroH1>
           <HeroP>Full Stack Developer</HeroP>
           <HeroBtnWrapper>
             <Button
@@ -31,7 +32,7 @@ const HeroSection = () => {
               duration={500}
               spy={true}
               // exact={true}
-              offset={-80}
+              offset={-20}
             >
               Connect {hover ? <ArrowForward /> : <ArrowRight />}
             </Button>

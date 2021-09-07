@@ -71,11 +71,11 @@ export const Heading = styled.h1`
   /* font-weight: 600; */
   color: #f7f8fa;
 
-  font-family: 'Archivo Black', sans-serif;
-    font-size: 63px;
-    line-height: 45px;
-    letter-spacing: -3px;
-    font-weight: 800;
+  font-family: ${({ font }) => (font.family)};
+  font-size: ${({ font }) => (font.fontSize)};
+  line-height: ${({ font }) => (font.lineHeight)};
+  letter-spacing: -3px;
+  font-weight: 800;
 
   @media screen and (max-width: 480px) {
     font-size: 59px;
@@ -86,7 +86,7 @@ export const Heading = styled.h1`
 export const Subtitle = styled.div`
   max-width: 480px;
   margin-bottom: 35px;
-  font-size: 1rem;
+  font-size: 18px;
   line-height: 24px;
   color: #f7f8fa;
 `
