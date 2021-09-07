@@ -53,7 +53,7 @@ export const projects = [
     description: [
       'A web-based application that provides recipes and nutritional data on a variety of cocktails using Nutrionix and Cocktail DB APIs.'
     ],
-    features: 'Search Functionality and Bar Chart Presentation',
+    features: ['Search Functionality', 'Bar Chart Presentation'],
     tools: ['JavaScript', 'CSS', 'HTML', 'Axios'],
     github: "https://github.com/Smeza314/Cocktail-Nutrition/",
     deploy: "https://smeza314.github.io/Cocktail-Nutrition/",
@@ -68,7 +68,7 @@ export const projects = [
   {
     title: 'Free Market',
     description: 'An application to connect outused goods with potential new owners. Users can search for items or post a listing of their own.',
-    features: 'User Authentication, Live Search Bar, Product Posting, and Editable User Accounts',
+    features: ['User Authentication', 'Live Search Bar', 'Product Posting', 'Editable User Accounts'],
     tools: ['JavaScript', 'CSS', 'HTML', 'Axios', 'MySQL', 'ExpressJS', 'NodeJS', 'Passport JWT'],
     github: "https://github.com/someseananigans/FreeMarket/",
     deploy: "http://thefreemarket.herokuapp.com/",
@@ -85,7 +85,7 @@ export const projects = [
   {
     title: 'FeedMe',
     description: 'A MERN stack instagram clone with the emphasis on Food Feeds. Back-End algorithsms provide users with a variety of Feed options.',
-    features: 'User Authentication, Image Uploading, Like/Comment/Follow Functionalities, Suggested Accounts, Diverse Feeds and Editable Profiles',
+    features: ['User Authentication', 'Image Uploading', 'Suggested Accounts', 'Like/Comment/Follow Functionalities', 'Diverse Feeds and Editable Profiles'],
     tools: ['JavaScript', 'CSS', 'HTML', 'Axios', 'MongoDB', 'ExpressJS', 'NodeJS', 'ReactJS', 'Passport JWT'],
     github: "https://github.com/someseananigans/feedMe/",
     deploy: "https://feedmepics.herokuapp.com/",
@@ -97,12 +97,12 @@ export const projects = [
       { image: 'https://imgur.com/JI9GEjE.png', caption: 'comments' }
     ],
     fit: ['contain', 'contain'],
-    background: '#ffd7c7, white',
+    background: '#ff9999, #ffd08a',
   },
   {
     title: 'GitMeOcto',
-    description: `A front-end GitHub User Summary react application. Search by username to get basic information on user including user's most recent repositories, urls, followers and other user info.`,
-    features: '',
+    description: `A single-page front-end GitHub User Summary react application. Search by username to get basic information on user including user's most recent repositories, urls, followers and other user info.`,
+    features: ['User info generation', 'Styled-Component animations'],
     tools: ['JavaScript', 'CSS', 'HTML', 'HttpRequest', 'NodeJS', 'ReactJS', 'Styled-Components'],
     github: "https://github.com/someseananigans/gitmeocto",
     deploy: "https://main.d1rawf7z427x2j.amplifyapp.com/",
@@ -117,7 +117,7 @@ export const projects = [
   {
     title: 'Currency Converter',
     description: `Simple currency converter application. Functionally designed drop down search bar, and hide'n'show components for available currencies with react using styled-components.`,
-    features: '',
+    features: ['Currency conversion', 'Dynamic search bar', 'Base and conversion rate switch'],
     tools: ['JavaScript', 'CSS', 'HTML', 'HttpRequest', 'NodeJS', 'ReactJS', 'Styled-Components'],
     github: "https://github.com/someseananigans/currency-converter",
     deploy: "https://main.d1x6dmj04lq12d.amplifyapp.com/",
@@ -132,7 +132,7 @@ export const projects = [
   {
     title: 'Discord Bot - Inertia',
     description: `Inertia is discord bot for ERC721 NFT collections, all token metadata is currently retrieved through opensea's API`,
-    features: '',
+    features: ['User command handling', 'Multiple deployment options', 'Automatic sales updates (on interval)', 'NFT Collection/Asset Info Generation'],
     tools: ['JavaScript', 'DiscordJS', 'HttpRequest', 'NodeJS', 'ExpressJS', 'Replit'],
     github: "https://github.com/someseananigans/Inertia-Discord-Bot",
     deploy: "",
