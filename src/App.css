@@ -50,5 +50,16 @@ body {
   height: 30px;
 }
 
+/* hide scrolling but allows scrolling */
 
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
 
+::-webkit-scrollbar {
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
