@@ -213,7 +213,7 @@ export const Features = Description
 
 export const DetailsWrapper = styled.div`
   display: flex;
-  margin: 10px 35px 0px 35px;
+  margin: 0px 35px 0px 35px;
 `
 
 export const HorWrapper = styled.div`
@@ -229,7 +229,7 @@ export const VertWrapper = styled.div`
   flex-direction: column;
   min-width: 250px;
   width: ${({ min }) => min && '590px'};
-  margin: ${({ margin }) => margin ? '10px 10px 10px 0px' : '10px 0px 10px 0px'};
+  margin: ${({ margin }) => margin === 'true' ? '10px 10px 0px 0px' : '10px 0px 0px 0px'};
 `
 
 export const Heading = styled.h3`
@@ -304,11 +304,11 @@ export const Next = styled.div`
   }
 `
 export const Selection = styled.div`
+  width: 100%;
   position: absolute;
-  top: -65px;
+  top: -57px;
   display: flex;
   place-content: space-between;
-  width: 900px;
   padding: 0 50px 0 50px;
 `
 export const Fixed = styled.div`
