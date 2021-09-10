@@ -46,7 +46,7 @@ const Navbar = ({ toggleOpen, location }) => {
 
   return (
     <>
-      <Nav scrollNav={scrollNav}>
+      <Nav scrollNav={location === '404' ? true : scrollNav}>
         <NavContainer>
 
           <LogoWrapper>

@@ -2,11 +2,12 @@ import styled from "styled-components";
 import { font } from "../../Data"
 
 const Modal = styled.div`
+  height: 90vh;
   position: fixed;
-  top: 0;
+  top: 20px;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,10 +24,11 @@ const Modal = styled.div`
         return "480px";
     }
   }};
-  max-width: 900px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   overflow-y: scroll;
+  overflow-x: hidden;
   &.fade-in {
     opacity: 1;
     transition: opacity linear 0.15s;
@@ -47,22 +49,34 @@ const Modal = styled.div`
     outline: 0;
   }
   .box-dialog {
+    overflow-y: auto;
+    height: inherit;
+    /* margin-top: 228px; */
     z-index: 1050;
     width: 100%;
     background-color: #fefefe;
     box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    ::-webkit-scrollbar {
+  width: 5px;
+  background: #ffffff0;
+}
+::-webkit-scrollbar-thumb {
+    background: #555;
+}
+
+
     .box-content {
       /* padding: 24px; */
       width: 100%;
-      height: 720px;
+      height: auto;
     }
     .box-header {
-      height: 48px;
+      /* height: 48px; */
       padding: 8px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 20px 0 -20px 0px;
+      /* margin: 20px 0 -20px 0px; */
       /* border-bottom: 1px solid #c7c7c7; */
       .box-title {
         font-family: ${font.main.family};

@@ -6,7 +6,8 @@ import { HiDatabase, HiLink } from 'react-icons/hi'
 import { FaPassport } from 'react-icons/fa'
 import { MdHttp } from 'react-icons/md'
 import Modal from '../Modal/Modal'
-import { Carousel } from 'react-carousel-minimal'
+// import { Carousel } from 'react-carousel-minimal'
+import { Carousel } from '../'
 
 const Portfolio = ({ projects, font }) => {
 
@@ -98,8 +99,8 @@ const Portfolio = ({ projects, font }) => {
                         <Next color={project.background.slice(8)} onClick={() => changeModal(projects[key < projects.length - 1 ? key + 1 : 0].title)}>❯</Next>
                       </Selection>
                     </Fixed>
-                    <CarouselWrapper>
-                      <Carousel
+                    {/* <CarouselWrapper> */}
+                    {/* <Carousel
                         data={project.images}
                         time={5000}
                         width="850px"
@@ -133,10 +134,11 @@ const Portfolio = ({ projects, font }) => {
                           maxHeight: "450px",
                           margin: "40px auto",
                         }}
-                      />
-                    </CarouselWrapper>
+                      /> */}
+                    <Carousel images={project.images} color={project.background.slice(0, 7)} />
+                    {/* </CarouselWrapper> */}
                     <DetailsWrapper>
-                      <VertWrapper margin={'true'}>
+                      <VertWrapper margin={'false'}>
                         <Heading>Description</Heading>
                         <Description>{project.description}</Description>
                         <HorWrapper>

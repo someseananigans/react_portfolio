@@ -1,5 +1,6 @@
 export { default as Navbar } from "./Navbar/Navbar"
 export { default as Sidebar } from "./Sidebar/Sidebar"
+export { default as Carousel } from "./Carousel/Carousel"
 export { default as HeroSection } from "./HeroSection/HeroSection"
 export { default as Portfolio } from "./Portfolio/Portfolio"
 export { default as About } from "./About/About"
