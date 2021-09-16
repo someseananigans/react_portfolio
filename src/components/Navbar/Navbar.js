@@ -7,7 +7,7 @@ import {
 import { FaBars } from 'react-icons/fa'
 import { animateScroll as scroll } from 'react-scroll'
 import logo from '../../images/logo.png'
-import resume from '../../images/Resume.pdf'
+import Sean_Resume from '../../images/Sean_ResumeDev2021.pdf'
 
 
 const Navbar = ({ toggleOpen, location }) => {
@@ -118,7 +118,8 @@ const Navbar = ({ toggleOpen, location }) => {
             </NavMenu>
 
             {location === 'main' && (<NavBtnLink to="/resume" >Resume</NavBtnLink>)}
-            {location === 'resume' && (<ResBtnLink href={resume} download="Sean_Nguyen - Resume2021" >Download</ResBtnLink>)}
+            {/* {location === 'resume' && (<ResBtnLink href={resume} target="_blank" download="Sean_Nguyen - Resume2021" >Download</ResBtnLink>)} */}
+            {location === 'resume' && (<ResBtnLink href={Sean_Resume} target="_blank" download>Download</ResBtnLink>)}
             {location === '404' && (<NavBtnLink to="/" >Home</NavBtnLink>)}
 
           </NavBtn>
